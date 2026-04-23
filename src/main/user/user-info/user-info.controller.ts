@@ -1,6 +1,5 @@
 import { GetUser, ValidateAuth } from '@/common/jwt/jwt.decorator';
 import {
-  BadRequestException,
   Body,
   Controller,
   Delete,
@@ -24,7 +23,6 @@ import {
 } from '@nestjs/swagger';
 import { UpdateUserInfoDto } from './dto/update-user-info.dto';
 import { UserInfoService } from './user-info.service';
-import { SpinHistoryDto } from './dto/createSpinHistory.dto';
 
 @ApiTags('USER Info')
 @Controller('user-info')
