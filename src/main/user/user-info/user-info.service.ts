@@ -6,6 +6,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
+import { randomUUID } from 'crypto';
 import { SpinHistoryDto } from './dto/createSpinHistory.dto';
 import { UpdateUserInfoDto } from './dto/update-user-info.dto';
 
@@ -175,7 +176,7 @@ export class UserInfoService {
         userId,
         redeemedAt: new Date(),
         expiresAt: new Date(),
-        code: offer.code,
+        code: `${offer.code}-${randomUUID()}`,
         bussinessId: offer.businessId,
         isRedeemed: true,
       },
