@@ -135,7 +135,7 @@ export class UserInfoService {
       },
     });
 
-    if (isAlreadyRedeem?.isClaimed) {
+    if (isAlreadyRedeem) {
       throw new BadRequestException('You already redeemed this offer');
     }
     const offer = await this.prisma.client.offer.findFirst({
@@ -166,7 +166,7 @@ export class UserInfoService {
     });
 
     if (alreadyRedeemed) {
-      throw new BadRequestException('Already redeemed');
+      throw new BadRequestException('You already redeemed this offer');
     }
 
     const log = await this.prisma.client.reedemaOffer.create({

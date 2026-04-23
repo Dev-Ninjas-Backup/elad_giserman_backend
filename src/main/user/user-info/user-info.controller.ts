@@ -94,7 +94,14 @@ export class UserInfoController {
     @Param('offerId') offerId: string,
     @GetUser('sub') userId: string,
   ) {
-    return this.userInfoService.redeemOffer(code, offerId, userId);
+    try {
+      return await this.userInfoService.redeemOffer(code, offerId, userId);
+    } catch (error) {
+      throw new HttpException(
+        error.message || 'Internal server error',
+        error.status || 500,
+      );
+    }
   }
 
   //  User sees all redeemed offers
