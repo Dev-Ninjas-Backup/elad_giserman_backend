@@ -31,7 +31,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
     if (!user) {
       // unauthorized because token refers to no user
-      throw new UnauthorizedException('User not found');
+      throw new UnauthorizedException('User must be logged in');
     }
 
     if (!user.isLoggedIn) {
