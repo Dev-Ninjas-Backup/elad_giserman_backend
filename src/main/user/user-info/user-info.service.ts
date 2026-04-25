@@ -7,7 +7,6 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { SpinHistoryDto } from './dto/createSpinHistory.dto';
 import { UpdateUserInfoDto } from './dto/update-user-info.dto';
 
 @Injectable()
