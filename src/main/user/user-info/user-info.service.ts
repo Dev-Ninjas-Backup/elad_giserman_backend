@@ -128,21 +128,8 @@ export class UserInfoService {
       throw new BadRequestException('Only premium users can redeem offers');
     }
 
-    const isAlreadyRedeem = await this.prisma.client.reedemaOffer.findFirst({
-      where: {
-        userId: userId,
-        offerId: offerId,
-      },
-    });
-
-    if (isAlreadyRedeem) {
-      throw new BadRequestException('You already redeemed this offer');
-    }
     const offer = await this.prisma.client.offer.findFirst({
-      where: {
-        id: offerId,
-        code,
-      },
+      where: { id: offerId, code },
     });
 
     if (!offer) {
@@ -161,12 +148,20 @@ export class UserInfoService {
       throw new BadRequestException('Offer cannot be redeemed');
     }
 
-    const alreadyRedeemed = await this.prisma.client.reedemaOffer.findFirst({
-      where: { offerId: offer.id, userId },
+    // Check if user already redeemed any offer from the same business in the last 24 hours
+    const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    const recentRedemption = await this.prisma.client.reedemaOffer.findFirst({
+      where: {
+        userId,
+        bussinessId: offer.businessId,
+        redeemedAt: { gte: last24Hours },
+      },
     });
 
-    if (alreadyRedeemed) {
-      throw new BadRequestException('You already redeemed this offer');
+    if (recentRedemption) {
+      throw new BadRequestException(
+        'You can only redeem one offer per business every 24 hours',
+      );
     }
 
     const log = await this.prisma.client.reedemaOffer.create({
