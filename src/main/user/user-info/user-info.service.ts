@@ -169,7 +169,8 @@ export class UserInfoService {
         offerId: offer.id,
         userId,
         redeemedAt: new Date(),
-        expiresAt: new Date(),
+        expiresAt:
+          offer.expiredsAt ?? new Date(Date.now() + 24 * 60 * 60 * 1000),
         code: `${offer.code}-${randomUUID()}`,
         bussinessId: offer.businessId,
         isRedeemed: true,
