@@ -258,7 +258,7 @@ export class BusinessProfileService {
       });
       return updatedProfile;
     } catch (e) {
-      console.error('UPDATE PROFILE ERROR:', JSON.stringify(e, null, 2));
+      console.error('UPDATE PROFILE ERROR:', e?.message || e);
       throw e;
     }
   }
