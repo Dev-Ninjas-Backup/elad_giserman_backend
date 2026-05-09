@@ -22,7 +22,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build the app (NestJS -> dist/)
-RUN pnpm prisma generate && pnpm build
+RUN DATABASE_URL="postgresql://postgres:postgres@localhost:5432/dummy" pnpm prisma generate && pnpm build
 
 # ====== PRODUCTION STAGE ======
 FROM node:24-slim AS production
