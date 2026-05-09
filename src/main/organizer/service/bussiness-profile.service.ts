@@ -223,6 +223,18 @@ export class BusinessProfileService {
     console.log(existingImages);
     const updateData: any = { ...restDto };
 
+    // Parse businessHours if it's a string (comes as JSON string from FormData)
+    if (
+      updateData.businessHours &&
+      typeof updateData.businessHours === 'string'
+    ) {
+      try {
+        updateData.businessHours = JSON.parse(updateData.businessHours);
+      } catch {
+        throw new BadRequestException('Invalid businessHours format');
+      }
+    }
+
     // Convert isActive to boolean
     if (updateData.isActive !== undefined) {
       updateData.isActive =
