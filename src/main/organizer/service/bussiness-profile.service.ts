@@ -250,13 +250,17 @@ export class BusinessProfileService {
     }
 
     // 6. Update profile in DB
-    const updatedProfile = await this.prisma.client.businessProfile.update({
-      where: { id: existingProfile.id },
-      data: updateData,
-      include: { gallery: true },
-    });
-
-    return updatedProfile;
+    try {
+      const updatedProfile = await this.prisma.client.businessProfile.update({
+        where: { id: existingProfile.id },
+        data: updateData,
+        include: { gallery: true },
+      });
+      return updatedProfile;
+    } catch (e) {
+      console.error('UPDATE PROFILE ERROR:', JSON.stringify(e, null, 2));
+      throw e;
+    }
   }
 
   //* get all profile
