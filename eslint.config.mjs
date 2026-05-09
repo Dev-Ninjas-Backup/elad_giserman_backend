@@ -1,23 +1,23 @@
 import js from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default [
-  {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'logs/**',
-      'prisma/**',
-      'generated/**',
-      'scripts/**',
-      'eslint.config.mjs',
-    ],
-  },
+export default defineConfig([
+  globalIgnores([
+    'node_modules/*',
+    'dist/*',
+    'logs/*',
+    'prisma/*',
+    'generated/*',
+    'scripts/*',
+    'eslint.config.mjs',
+  ]),
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
-    ...js.configs.recommended,
+    plugins: { js },
+    extends: ['js/recommended'],
     rules: {
       'no-console': [
         'warn',
@@ -41,4 +41,4 @@ export default [
     },
   },
   eslintPluginPrettierRecommended,
-];
+]);
