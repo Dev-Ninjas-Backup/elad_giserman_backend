@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBoolean, IsOptional, IsString } from 'class-validator';
+import { IsBoolean, IsOptional, IsString, IsObject } from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class UpdateBusinessProfileDto {
@@ -44,6 +44,35 @@ export class UpdateBusinessProfileDto {
   @IsOptional()
   @IsString()
   closingTime?: string;
+
+  @ApiProperty({
+    example: 'uuid-of-file-instance',
+    description: 'ID of the main image to display first',
+    required: false,
+  })
+  @IsOptional()
+  @IsString()
+  mainImageId?: string;
+
+  @ApiProperty({
+    example: {
+      monday: { open: '09:00', close: '21:00', isOpen: true },
+      tuesday: { open: '09:00', close: '21:00', isOpen: true },
+      wednesday: { open: '09:00', close: '21:00', isOpen: true },
+      thursday: { open: '09:00', close: '21:00', isOpen: true },
+      friday: { open: '09:00', close: '21:00', isOpen: true },
+      saturday: { open: '10:00', close: '18:00', isOpen: true },
+      sunday: { open: '00:00', close: '00:00', isOpen: false },
+    },
+    description: 'Business hours per day of the week',
+    required: false,
+  })
+  @IsOptional()
+  @IsObject()
+  businessHours?: Record<
+    string,
+    { open: string; close: string; isOpen: boolean }
+  >;
 
   @ApiProperty({
     description: 'Existing gallery images coming from client',
