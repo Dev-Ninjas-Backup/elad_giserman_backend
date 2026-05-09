@@ -249,13 +249,40 @@ export class BusinessProfileService {
       updateData.gallery.create = newGallery;
     }
 
+    // mainImageId: find matching image by filename and update after gallery recreate
+    const mainImageFilename = updateData.mainImageId
+      ? clientExistingImages.find((img) => img.id === updateData.mainImageId)
+          ?.filename
+      : null;
+    // Will resolve mainImageId after update
+    delete updateData.mainImageId;
+
     // 6. Update profile in DB
     try {
-      const updatedProfile = await this.prisma.client.businessProfile.update({
-        where: { id: existingProfile.id },
-        data: updateData,
-        include: { gallery: true },
-      });
+      let updatedProfile: any = await this.prisma.client.businessProfile.update(
+        {
+          where: { id: existingProfile.id },
+          data: updateData,
+          include: { gallery: true },
+        },
+      );
+
+      // Resolve mainImageId by matching filename in new gallery
+      if (mainImageFilename) {
+        const matchedImage = updatedProfile.gallery.find(
+          (img: any) => img.filename === mainImageFilename,
+        );
+        if (matchedImage) {
+          updatedProfile = await (
+            this.prisma.client.businessProfile.update as any
+          )({
+            where: { id: existingProfile.id },
+            data: { mainImageId: matchedImage.id },
+            include: { gallery: true },
+          });
+        }
+      }
+
       return updatedProfile;
     } catch (e) {
       console.error('UPDATE PROFILE ERROR:', e?.message || e);
