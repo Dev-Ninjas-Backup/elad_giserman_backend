@@ -182,7 +182,9 @@ export class BusinessProfileService {
         }
       } catch (e: unknown) {
         const error = e as Error;
-        throw new BadRequestException(error.message || 'Invalid existingImages format');
+        throw new BadRequestException(
+          error.message || 'Invalid existingImages format',
+        );
       }
     }
 
