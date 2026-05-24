@@ -154,6 +154,10 @@ export class BusinessProfileService {
     dto: UpdateBusinessProfileDto,
     galleryFiles: Express.Multer.File[] = [],
   ) {
+    console.log('📥 DTO received:', {
+      isActive: dto.isActive,
+      type: typeof dto.isActive,
+    });
     // 1. Load existing profile
     const existingProfile = await this.prisma.client.businessProfile.findFirst({
       where: { ownerId: userId },
@@ -176,8 +180,9 @@ export class BusinessProfileService {
         if (!Array.isArray(clientExistingImages)) {
           throw new BadRequestException('existingImages must be an array');
         }
-      } catch (e) {
-        throw new BadRequestException(e.message);
+      } catch (e: unknown) {
+        const error = e as Error;
+        throw new BadRequestException(error.message || 'Invalid existingImages format');
       }
     }
 
@@ -235,10 +240,20 @@ export class BusinessProfileService {
       }
     }
 
-    // Convert isActive to boolean
+    // Convert isActive to boolean (multipart/form-data sends everything as string)
     if (updateData.isActive !== undefined) {
+      console.log(
+        '🔍 isActive BEFORE conversion:',
+        updateData.isActive,
+        typeof updateData.isActive,
+      );
       updateData.isActive =
         updateData.isActive === 'true' || updateData.isActive === true;
+      console.log(
+        '🔍 isActive AFTER conversion:',
+        updateData.isActive,
+        typeof updateData.isActive,
+      );
     }
 
     // Remove old gallery
@@ -284,8 +299,9 @@ export class BusinessProfileService {
       }
 
       return updatedProfile;
-    } catch (e) {
-      console.error('UPDATE PROFILE ERROR:', e?.message || e);
+    } catch (e: unknown) {
+      const error = e as Error;
+      console.error('UPDATE PROFILE ERROR:', error?.message || e);
       throw e;
     }
   }
