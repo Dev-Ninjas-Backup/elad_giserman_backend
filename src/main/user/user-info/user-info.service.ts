@@ -21,6 +21,7 @@ export class UserInfoService {
     const result = await this.prisma.client.user.findFirst({
       where: {
         id: userId,
+        status: { not: 'DELETED' }, // Exclude deleted users
       },
     });
     if (!result) {
@@ -59,14 +60,30 @@ export class UserInfoService {
     return res;
   }
 
-  // delete my account
+  // delete my account (soft delete)
   async deleteMyAccount(id: string) {
-    const res = await this.prisma.client.user.delete({
-      where: {
-        id: id,
+    // Soft delete: just mark user as DELETED
+    const res = await this.prisma.client.user.update({
+      where: { id },
+      data: {
+        status: 'DELETED',
+        isLoggedIn: false,
+        lastLogoutAt: new Date(),
+        // Optionally anonymize sensitive data
+        email: `deleted_${id}@deleted.com`,
+        username: `deleted_${id}`,
+        mobile: null,
+        avatarUrl: null,
+        fcmToken: null,
+        stripeCustomerId: null,
+        stripeDefaultPaymentMethodId: null,
       },
     });
-    return res;
+
+    return {
+      message: 'Account deleted successfully',
+      data: res,
+    };
   }
 
   // scan qr code for get offer-------

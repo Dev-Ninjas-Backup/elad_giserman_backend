@@ -23,6 +23,12 @@ export class AuthLoginService {
 
     const user = await this.prisma.client.user.findUnique({ where: { email } });
     if (!user) throw new AppError(400, 'User not found');
+
+    // Check if user is deleted
+    if (user.status === 'DELETED') {
+      throw new AppError(400, 'This account has been deleted');
+    }
+
     if (!user.password)
       throw new AppError(400, 'Please login using your social account');
 
