@@ -154,10 +154,6 @@ export class BusinessProfileService {
     dto: UpdateBusinessProfileDto,
     galleryFiles: Express.Multer.File[] = [],
   ) {
-    console.log('📥 DTO received:', {
-      isActive: dto.isActive,
-      type: typeof dto.isActive,
-    });
     // 1. Load existing profile
     const existingProfile = await this.prisma.client.businessProfile.findFirst({
       where: { ownerId: userId },
@@ -243,19 +239,8 @@ export class BusinessProfileService {
     }
 
     // Convert isActive to boolean (multipart/form-data sends everything as string)
-    if (updateData.isActive !== undefined) {
-      console.log(
-        '🔍 isActive BEFORE conversion:',
-        updateData.isActive,
-        typeof updateData.isActive,
-      );
-      updateData.isActive =
-        updateData.isActive === 'true' || updateData.isActive === true;
-      console.log(
-        '🔍 isActive AFTER conversion:',
-        updateData.isActive,
-        typeof updateData.isActive,
-      );
+    if (updateData.isActive !== undefined && updateData.isActive !== null) {
+      updateData.isActive = updateData.isActive === 'true' || updateData.isActive === true;
     }
 
     // Remove old gallery
