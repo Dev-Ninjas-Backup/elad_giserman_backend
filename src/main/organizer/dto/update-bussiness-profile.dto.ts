@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
-import { Transform, Type } from 'class-transformer';
 
 export class UpdateBusinessProfileDto {
   @ApiProperty({ example: 'The Coffee Spot (Updated)', required: false })
@@ -31,13 +30,7 @@ export class UpdateBusinessProfileDto {
 
   @ApiProperty({ example: true, required: false })
   @IsOptional()
-  @Transform(({ value }) => {
-    if (value === 'true') return true;
-    if (value === 'false') return false;
-    return Boolean(value);
-  })
-  @IsBoolean()
-  isActive?: boolean;
+  isActive?: any;
 
   @ApiProperty({ example: '09:00 AM', required: false })
   @IsOptional()

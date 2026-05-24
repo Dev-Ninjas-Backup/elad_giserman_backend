@@ -232,6 +232,10 @@ export class BusinessProfileController {
     @Body() dto: UpdateBusinessProfileDto,
     @UploadedFiles() gallery: Express.Multer.File[],
   ) {
+    // Manually convert isActive from string to boolean
+    if (dto.isActive !== undefined) {
+      dto.isActive = dto.isActive === 'true' || dto.isActive === true;
+    }
     return this.businessProfileService.update(id, dto, gallery);
   }
 

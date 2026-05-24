@@ -223,7 +223,6 @@ export class BusinessProfileService {
 
     // 5. Prepare updateData
     const { existingImages, ...restDto } = dto;
-    console.log(existingImages);
     const updateData: any = { ...restDto };
 
     // Parse businessHours if it's a string (comes as JSON string from FormData)
@@ -238,11 +237,8 @@ export class BusinessProfileService {
       }
     }
 
-    // Convert isActive to boolean (multipart/form-data sends everything as string)
-    if (updateData.isActive !== undefined && updateData.isActive !== null) {
-      updateData.isActive =
-        updateData.isActive === 'true' || updateData.isActive === true;
-    }
+    // isActive is already converted to boolean in controller
+    // No need to convert again here
 
     // Remove old gallery
     updateData.gallery = { set: [] };
