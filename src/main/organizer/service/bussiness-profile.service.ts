@@ -240,7 +240,8 @@ export class BusinessProfileService {
 
     // Convert isActive to boolean (multipart/form-data sends everything as string)
     if (updateData.isActive !== undefined && updateData.isActive !== null) {
-      updateData.isActive = updateData.isActive === 'true' || updateData.isActive === true;
+      updateData.isActive =
+        updateData.isActive === 'true' || updateData.isActive === true;
     }
 
     // Remove old gallery
