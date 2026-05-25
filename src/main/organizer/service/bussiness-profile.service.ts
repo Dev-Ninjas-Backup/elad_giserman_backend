@@ -316,28 +316,10 @@ export class BusinessProfileService {
       skip,
       take: limit,
       where,
-      select: {
-        id: true,
-        phone: true,
-        title: true,
-        description: true,
-        isActive: true,
-        profileTypeName: true,
-        closingTime: true,
-        openingTime: true,
-        location: true,
-        facebook: true,
-        instagram: true,
-        twitter: true,
-        website: true,
-        linkedin: true,
-        pinterest: true,
-        youtube: true,
-
+      include: {
         category: true,
         gallery: true,
         reservation: true,
-
         owner: {
           select: {
             id: true,
@@ -345,7 +327,6 @@ export class BusinessProfileService {
             email: true,
           },
         },
-
         _count: {
           select: {
             offers: true,
@@ -366,7 +347,7 @@ export class BusinessProfileService {
     });
 
     // Merge profiles with stats and counts
-    const profilesWithStats = shuffledProfiles.map((profile) => {
+    const profilesWithStats = shuffledProfiles.map((profile: any) => {
       const stats = reviewStats.find((r) => r.businessProfileId === profile.id);
       return {
         ...profile,
