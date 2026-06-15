@@ -13,8 +13,7 @@ export class AdminReviewService {
 
   // Get all reviews
   async getReviews(filter: GetReviewDto) {
-    const { page = 1, limit = 10, search } = filter;
-    const skip = (page - 1) * limit;
+    const { page, limit, search } = filter;
     const where: any = {};
     if (search) {
       where.OR = [
@@ -22,11 +21,15 @@ export class AdminReviewService {
         { businessProfile: { title: { contains: search } } },
       ];
     }
+    const adminReviewPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      adminReviewPagination.take = Number(limit);
+      adminReviewPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     try {
       const result = await this.prisma.client.review.findMany({
         where,
-        skip,
-        take: limit,
+        ...adminReviewPagination,
         include: {
           user: {
             select: {

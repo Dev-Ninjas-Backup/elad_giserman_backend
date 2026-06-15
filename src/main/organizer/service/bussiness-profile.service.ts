@@ -292,8 +292,7 @@ export class BusinessProfileService {
 
   //* get all profile
   async getAllProfiles(filter: ProfileFilter) {
-    const { search, profileType, page = 1, limit = 10 } = filter;
-    const skip = (page - 1) * limit;
+    const { search, profileType, page, limit } = filter;
 
     const where: any = {};
 
@@ -312,9 +311,14 @@ export class BusinessProfileService {
       };
     }
 
+    const paginationArgs: { skip?: number; take?: number } = {};
+    if (limit) {
+      paginationArgs.take = Number(limit);
+      paginationArgs.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
+
     const profiles = await this.prisma.client.businessProfile.findMany({
-      skip,
-      take: limit,
+      ...paginationArgs,
       where,
       include: {
         category: true,
@@ -531,8 +535,7 @@ export class BusinessProfileService {
 
   //*Get all redeemtions
   async getAllRedemtions(filter: GetReviewDto, userId: string) {
-    const { page = 1, limit = 10, search } = filter;
-    const skip = (page - 1) * limit;
+    const { page, limit, search } = filter;
 
     // 1. Find business profile
     const businessProfile = await this.prisma.client.businessProfile.findFirst({
@@ -553,9 +556,13 @@ export class BusinessProfileService {
         { description: { contains: search, mode: 'insensitive' } },
       ];
     }
+    const redemptionPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      redemptionPagination.take = Number(limit);
+      redemptionPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     return this.prisma.client.reedemaOffer.findMany({
-      skip,
-      take: limit,
+      ...redemptionPagination,
       where,
       include: {
         offer: true,
@@ -573,8 +580,7 @@ export class BusinessProfileService {
 
   //*Get all reservations
   async getARestReservation(userId: string, filter: ReservationFilter) {
-    const { page = 1, limit = 10, search, date } = filter;
-    const skip = (page - 1) * limit;
+    const { page, limit, search, date } = filter;
 
     const findOrganizationProfile =
       await this.prisma.client.businessProfile.findFirst({
@@ -601,6 +607,11 @@ export class BusinessProfileService {
         lte: new Date(`${date}T23:59:59.999Z`),
       };
     }
+    const reservationPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      reservationPagination.take = Number(limit);
+      reservationPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     const reservations = await this.prisma.client.reservation.findMany({
       where,
       include: {
@@ -613,8 +624,7 @@ export class BusinessProfileService {
           },
         },
       },
-      skip,
-      take: limit,
+      ...reservationPagination,
       orderBy: {
         createdAt: 'desc',
       },

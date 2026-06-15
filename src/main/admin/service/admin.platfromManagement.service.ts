@@ -683,11 +683,14 @@ export class AdminPlatfromManagementService {
   }
 
   async getPaymentLog(filter: GetOffersDto) {
-    const { page = 1, limit = 10 } = filter;
-    const skip = (page - 1) * limit;
+    const { page, limit } = filter;
+    const paymentPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      paymentPagination.take = Number(limit);
+      paymentPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     const res = await this.prisma.client.invoice.findMany({
-      skip,
-      take: limit,
+      ...paymentPagination,
       orderBy: { createdAt: 'desc' },
       select: {
         id: true,
@@ -711,11 +714,14 @@ export class AdminPlatfromManagementService {
 
   //* spin history
   async getSpinHistory(filter: GetOffersDto) {
-    const { page = 1, limit = 10 } = filter;
-    const skip = (page - 1) * 10;
+    const { page, limit } = filter;
+    const spinPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      spinPagination.take = Number(limit);
+      spinPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     const res = await this.prisma.client.spinHistory.findMany({
-      skip,
-      take: limit,
+      ...spinPagination,
       include: {
         user: true,
       },
@@ -730,8 +736,7 @@ export class AdminPlatfromManagementService {
   }
 
   async getAllReservation(filter: ReservationFilter) {
-    const { page = 1, limit = 10, search, date } = filter;
-    const skip = (page - 1) * limit;
+    const { page, limit, search, date } = filter;
 
     const where: any = {};
     if (search) {
@@ -745,6 +750,12 @@ export class AdminPlatfromManagementService {
         gte: new Date(`${date}T00:00:00.000Z`),
         lte: new Date(`${date}T23:59:59.999Z`),
       };
+    }
+    const adminReservationPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      adminReservationPagination.take = Number(limit);
+      adminReservationPagination.skip =
+        ((Number(page) || 1) - 1) * Number(limit);
     }
     const reservations = await this.prisma.client.reservation.findMany({
       where,
@@ -768,8 +779,7 @@ export class AdminPlatfromManagementService {
           },
         },
       },
-      skip,
-      take: limit,
+      ...adminReservationPagination,
       orderBy: {
         createdAt: 'desc',
       },
