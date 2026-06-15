@@ -109,8 +109,7 @@ export class OfferService {
   }
   // find oranizer offer
   async findMyOffers(userId: string, filter: GetOffersDto2) {
-    const { status, page = 1, limit = 10, search } = filter;
-    const skip = (page - 1) * limit;
+    const { status, page, limit, search } = filter;
 
     // Find the user's business profile
     const business = await this.prisma.client.businessProfile.findUnique({
@@ -137,18 +136,21 @@ export class OfferService {
         { description: { contains: search } },
       ];
     }
+    const offerPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      offerPagination.take = Number(limit);
+      offerPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     // Fetch offers with pagination
     return this.prisma.client.offer.findMany({
-      skip,
-      take: limit,
+      ...offerPagination,
       where,
       include: { business: true },
     });
   }
 
   async findReviews(userId: string, filter: GetOffersDto2) {
-    const { status, page = 1, limit = 10 } = filter;
-    const skip = (page - 1) * limit;
+    const { status, page, limit } = filter;
 
     // Find the user's business profile
     const business = await this.prisma.client.businessProfile.findUnique({
@@ -170,10 +172,14 @@ export class OfferService {
       where.status = status;
     }
 
+    const reviewPagination: { skip?: number; take?: number } = {};
+    if (limit) {
+      reviewPagination.take = Number(limit);
+      reviewPagination.skip = ((Number(page) || 1) - 1) * Number(limit);
+    }
     // Fetch offers with pagination
     return this.prisma.client.review.findMany({
-      skip,
-      take: limit,
+      ...reviewPagination,
       where,
       include: {
         user: {
