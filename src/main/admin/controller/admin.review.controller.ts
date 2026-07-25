@@ -34,9 +34,10 @@ export class AdminReviewController {
 
   @Delete('reviews/:id')
   @ValidateAdmin()
-  async deleteReview(@Param('id') id: string) {
+  async deleteReview(@Param('id') _id: string) {
     try {
-      console.log(id);
+      void _id;
+      // delete review logic
     } catch (error) {
       throw new HttpException(error.message, error.status);
     }

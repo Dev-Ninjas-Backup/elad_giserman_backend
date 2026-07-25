@@ -3,7 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
   HttpStatus,
@@ -11,7 +10,6 @@ import {
 } from '@nestjs/common';
 import { UserReservationService } from './user-reservation.service';
 
-import { UpdateUserReservationDto } from './dto/update-user-reservation.dto';
 import { CreateReservationDto } from './dto/create-user-reservation.dto';
 import { ApiBearerAuth, ApiBody, ApiOperation } from '@nestjs/swagger';
 import { GetUser, ValidateAuth } from '@/common/jwt/jwt.decorator';
@@ -78,7 +76,7 @@ export class UserReservationController {
   @Delete('delete/:id')
   async remove(@Param('id') id: string) {
     try {
-      const res = await this.userReservationService.remove(id);
+      await this.userReservationService.remove(id);
       return {
         statusCode: HttpStatus.OK,
         message: ' Reservation Deleted  succesful',

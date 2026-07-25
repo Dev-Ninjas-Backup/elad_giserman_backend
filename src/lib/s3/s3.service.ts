@@ -17,6 +17,7 @@ import {
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { FileType } from '@prisma';
+import { Express } from 'express';
 import { v4 as uuid } from 'uuid';
 
 @Injectable()

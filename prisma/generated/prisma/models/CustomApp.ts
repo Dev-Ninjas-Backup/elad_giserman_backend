@@ -93,8 +93,8 @@ export type CustomAppCountAggregateInputType = {
 };
 
 export type CustomAppAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which CustomApp to aggregate.
@@ -155,8 +155,8 @@ export type GetCustomAppAggregateType<T extends CustomAppAggregateArgs> = {
 };
 
 export type CustomAppGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.CustomAppWhereInput;
   orderBy?:
@@ -395,8 +395,8 @@ export type CustomAppMinOrderByAggregateInput = {
 };
 
 export type CustomAppSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -412,8 +412,8 @@ export type CustomAppSelect<
 >;
 
 export type CustomAppSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -429,8 +429,8 @@ export type CustomAppSelectCreateManyAndReturn<
 >;
 
 export type CustomAppSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -457,8 +457,8 @@ export type CustomAppSelectScalar = {
 };
 
 export type CustomAppOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'title'
@@ -472,8 +472,8 @@ export type CustomAppOmit<
 >;
 
 export type $CustomAppPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'CustomApp';
   objects: {};
@@ -498,15 +498,15 @@ export type CustomAppGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$CustomAppPayload, S>;
 
 export type CustomAppCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<CustomAppFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
   select?: CustomAppCountAggregateInputType | true;
 };
 
 export interface CustomAppDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1032,8 +1032,8 @@ export interface CustomAppDelegate<
 export interface Prisma__CustomAppClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1094,8 +1094,8 @@ export interface CustomAppFieldRefs {
  * CustomApp findUnique
  */
 export type CustomAppFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1115,8 +1115,8 @@ export type CustomAppFindUniqueArgs<
  * CustomApp findUniqueOrThrow
  */
 export type CustomAppFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1136,8 +1136,8 @@ export type CustomAppFindUniqueOrThrowArgs<
  * CustomApp findFirst
  */
 export type CustomAppFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1191,8 +1191,8 @@ export type CustomAppFindFirstArgs<
  * CustomApp findFirstOrThrow
  */
 export type CustomAppFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1246,8 +1246,8 @@ export type CustomAppFindFirstOrThrowArgs<
  * CustomApp findMany
  */
 export type CustomAppFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1296,8 +1296,8 @@ export type CustomAppFindManyArgs<
  * CustomApp create
  */
 export type CustomAppCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1320,8 +1320,8 @@ export type CustomAppCreateArgs<
  * CustomApp createMany
  */
 export type CustomAppCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many CustomApps.
@@ -1334,8 +1334,8 @@ export type CustomAppCreateManyArgs<
  * CustomApp createManyAndReturn
  */
 export type CustomAppCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1356,8 +1356,8 @@ export type CustomAppCreateManyAndReturnArgs<
  * CustomApp update
  */
 export type CustomAppUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1384,8 +1384,8 @@ export type CustomAppUpdateArgs<
  * CustomApp updateMany
  */
 export type CustomAppUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update CustomApps.
@@ -1408,8 +1408,8 @@ export type CustomAppUpdateManyArgs<
  * CustomApp updateManyAndReturn
  */
 export type CustomAppUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1440,8 +1440,8 @@ export type CustomAppUpdateManyAndReturnArgs<
  * CustomApp upsert
  */
 export type CustomAppUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1475,8 +1475,8 @@ export type CustomAppUpsertArgs<
  * CustomApp delete
  */
 export type CustomAppDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp
@@ -1496,8 +1496,8 @@ export type CustomAppDeleteArgs<
  * CustomApp deleteMany
  */
 export type CustomAppDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which CustomApps to delete
@@ -1513,8 +1513,8 @@ export type CustomAppDeleteManyArgs<
  * CustomApp without action
  */
 export type CustomAppDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the CustomApp

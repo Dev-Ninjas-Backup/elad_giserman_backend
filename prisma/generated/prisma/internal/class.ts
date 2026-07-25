@@ -44,8 +44,9 @@ config.compilerWasm = {
     await import('@prisma/client/runtime/query_compiler_bg.postgresql.js'),
 
   getQueryCompilerWasmModule: async () => {
-    const { wasm } =
-      await import('@prisma/client/runtime/query_compiler_bg.postgresql.wasm-base64.js');
+    const { wasm } = await import(
+      '@prisma/client/runtime/query_compiler_bg.postgresql.wasm-base64.js'
+    );
     return await decodeBase64AsWasm(wasm);
   },
 };
@@ -80,8 +81,8 @@ export interface PrismaClientConstructor {
     }
       ? U
       : Prisma.PrismaClientOptions['omit'],
-    ExtArgs extends runtime.Types.Extensions.InternalArgs =
-      runtime.Types.Extensions.DefaultArgs,
+    ExtArgs extends
+      runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   >(
     options: Prisma.Subset<Options, Prisma.PrismaClientOptions>,
   ): PrismaClient<LogOpts, OmitOpts, ExtArgs>;
@@ -104,8 +105,8 @@ export interface PrismaClientConstructor {
 export interface PrismaClient<
   in LogOpts extends Prisma.LogLevel = never,
   in out OmitOpts extends Prisma.PrismaClientOptions['omit'] = undefined,
-  in out ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  in out ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > {
   [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['other'] };
 

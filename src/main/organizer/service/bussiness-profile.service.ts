@@ -7,9 +7,9 @@ import {
 } from '@nestjs/common';
 
 import { FileType } from '@prisma';
+import { Express } from 'express';
 
 import { GetReviewDto } from '@/main/admin/dto/getReview.dto';
-import { CreateTermsAndConditionsDto } from '@/main/admin/dto/termAndCondition.dto';
 import { CreateBusinessProfileDto } from '../dto/create-bussiness-profile.dto';
 import { ProfileFilter } from '../dto/getProfileWithFilter.dto';
 import { UpdateBusinessProfileDto } from '../dto/update-bussiness-profile.dto';
@@ -65,12 +65,11 @@ export class BusinessProfileService {
 
     // create business profile in Prisma
     const { categoryId, ...restDto } = dto;
-    console.log(dto);
     return this.prisma.client.businessProfile.create({
       data: {
         ...restDto,
         ownerId: id,
-        categoryId: dto.categoryId,
+        categoryId,
         profileTypeName: dto.profileTypeName,
         gallery:
           uploadedFiles.length > 0
@@ -222,7 +221,8 @@ export class BusinessProfileService {
     );
 
     // 5. Prepare updateData
-    const { existingImages, ...restDto } = dto;
+    const restDto = { ...dto };
+    delete (restDto as any).existingImages;
     const updateData: any = { ...restDto };
 
     // Parse businessHours if it's a string (comes as JSON string from FormData)

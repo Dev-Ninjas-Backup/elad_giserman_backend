@@ -89,8 +89,8 @@ export type TermsSectionCountAggregateInputType = {
 };
 
 export type TermsSectionAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which TermsSection to aggregate.
@@ -164,8 +164,8 @@ export type GetTermsSectionAggregateType<T extends TermsSectionAggregateArgs> =
   };
 
 export type TermsSectionGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.TermsSectionWhereInput;
   orderBy?:
@@ -593,8 +593,8 @@ export type TermsSectionUncheckedUpdateManyWithoutTermsInput = {
 };
 
 export type TermsSectionSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -608,8 +608,8 @@ export type TermsSectionSelect<
 >;
 
 export type TermsSectionSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -623,8 +623,8 @@ export type TermsSectionSelectCreateManyAndReturn<
 >;
 
 export type TermsSectionSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -646,34 +646,34 @@ export type TermsSectionSelectScalar = {
 };
 
 export type TermsSectionOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'title' | 'content' | 'order' | 'termsId',
   ExtArgs['result']['termsSection']
 >;
 export type TermsSectionInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   terms?: boolean | Prisma.TermsAndConditionsDefaultArgs<ExtArgs>;
 };
 export type TermsSectionIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   terms?: boolean | Prisma.TermsAndConditionsDefaultArgs<ExtArgs>;
 };
 export type TermsSectionIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   terms?: boolean | Prisma.TermsAndConditionsDefaultArgs<ExtArgs>;
 };
 
 export type $TermsSectionPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'TermsSection';
   objects: {
@@ -697,8 +697,8 @@ export type TermsSectionGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$TermsSectionPayload, S>;
 
 export type TermsSectionCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   TermsSectionFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -707,8 +707,8 @@ export type TermsSectionCountArgs<
 };
 
 export interface TermsSectionDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1237,8 +1237,8 @@ export interface TermsSectionDelegate<
 export interface Prisma__TermsSectionClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1310,8 +1310,8 @@ export interface TermsSectionFieldRefs {
  * TermsSection findUnique
  */
 export type TermsSectionFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1335,8 +1335,8 @@ export type TermsSectionFindUniqueArgs<
  * TermsSection findUniqueOrThrow
  */
 export type TermsSectionFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1360,8 +1360,8 @@ export type TermsSectionFindUniqueOrThrowArgs<
  * TermsSection findFirst
  */
 export type TermsSectionFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1419,8 +1419,8 @@ export type TermsSectionFindFirstArgs<
  * TermsSection findFirstOrThrow
  */
 export type TermsSectionFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1478,8 +1478,8 @@ export type TermsSectionFindFirstOrThrowArgs<
  * TermsSection findMany
  */
 export type TermsSectionFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1532,8 +1532,8 @@ export type TermsSectionFindManyArgs<
  * TermsSection create
  */
 export type TermsSectionCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1560,8 +1560,8 @@ export type TermsSectionCreateArgs<
  * TermsSection createMany
  */
 export type TermsSectionCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many TermsSections.
@@ -1576,8 +1576,8 @@ export type TermsSectionCreateManyArgs<
  * TermsSection createManyAndReturn
  */
 export type TermsSectionCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1604,8 +1604,8 @@ export type TermsSectionCreateManyAndReturnArgs<
  * TermsSection update
  */
 export type TermsSectionUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1636,8 +1636,8 @@ export type TermsSectionUpdateArgs<
  * TermsSection updateMany
  */
 export type TermsSectionUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update TermsSections.
@@ -1660,8 +1660,8 @@ export type TermsSectionUpdateManyArgs<
  * TermsSection updateManyAndReturn
  */
 export type TermsSectionUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1696,8 +1696,8 @@ export type TermsSectionUpdateManyAndReturnArgs<
  * TermsSection upsert
  */
 export type TermsSectionUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1735,8 +1735,8 @@ export type TermsSectionUpsertArgs<
  * TermsSection delete
  */
 export type TermsSectionDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1760,8 +1760,8 @@ export type TermsSectionDeleteArgs<
  * TermsSection deleteMany
  */
 export type TermsSectionDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which TermsSections to delete
@@ -1777,8 +1777,8 @@ export type TermsSectionDeleteManyArgs<
  * TermsSection without action
  */
 export type TermsSectionDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection

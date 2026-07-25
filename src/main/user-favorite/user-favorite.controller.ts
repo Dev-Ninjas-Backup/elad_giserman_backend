@@ -3,9 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
-  Param,
-  Delete,
   InternalServerErrorException,
 } from '@nestjs/common';
 import { UserFavoriteService } from './user-favorite.service';

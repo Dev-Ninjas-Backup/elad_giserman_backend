@@ -94,7 +94,8 @@ export class UserReservationService {
     return isResExit;
   }
 
-  update(id: number, updateUserReservationDto: UpdateUserReservationDto) {
+  update(id: number, _updateUserReservationDto: UpdateUserReservationDto) {
+    void _updateUserReservationDto;
     return `This action updates a #${id} userReservation`;
   }
 

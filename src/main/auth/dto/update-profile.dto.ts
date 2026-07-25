@@ -1,5 +1,6 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
+import { Express } from 'express';
 
 export class UpdateProfileDto {
   @ApiPropertyOptional({ example: 'John', description: 'Optional name' })

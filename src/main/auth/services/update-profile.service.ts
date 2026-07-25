@@ -6,6 +6,7 @@ import { FileService } from '@/lib/file/file.service';
 import { PrismaService } from '@/lib/prisma/prisma.service';
 import { UtilsService } from '@/lib/utils/utils.service';
 import { Injectable } from '@nestjs/common';
+import { Express } from 'express';
 import { UpdateProfileDto } from '../dto/update-profile.dto';
 
 @Injectable()

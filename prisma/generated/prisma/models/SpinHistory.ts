@@ -81,8 +81,8 @@ export type SpinHistoryCountAggregateInputType = {
 };
 
 export type SpinHistoryAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which SpinHistory to aggregate.
@@ -143,8 +143,8 @@ export type GetSpinHistoryAggregateType<T extends SpinHistoryAggregateArgs> = {
 };
 
 export type SpinHistoryGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.SpinHistoryWhereInput;
   orderBy?:
@@ -795,8 +795,8 @@ export type SpinHistoryUncheckedUpdateManyWithoutUserInput = {
 };
 
 export type SpinHistorySelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -812,8 +812,8 @@ export type SpinHistorySelect<
 >;
 
 export type SpinHistorySelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -829,8 +829,8 @@ export type SpinHistorySelectCreateManyAndReturn<
 >;
 
 export type SpinHistorySelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -855,37 +855,37 @@ export type SpinHistorySelectScalar = {
 };
 
 export type SpinHistoryOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'userId' | 'spinId' | 'isUsed' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['spinHistory']
 >;
 export type SpinHistoryInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   spin?: boolean | Prisma.SpinHistory$spinArgs<ExtArgs>;
   user?: boolean | Prisma.SpinHistory$userArgs<ExtArgs>;
 };
 export type SpinHistoryIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   spin?: boolean | Prisma.SpinHistory$spinArgs<ExtArgs>;
   user?: boolean | Prisma.SpinHistory$userArgs<ExtArgs>;
 };
 export type SpinHistoryIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   spin?: boolean | Prisma.SpinHistory$spinArgs<ExtArgs>;
   user?: boolean | Prisma.SpinHistory$userArgs<ExtArgs>;
 };
 
 export type $SpinHistoryPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'SpinHistory';
   objects: {
@@ -911,8 +911,8 @@ export type SpinHistoryGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$SpinHistoryPayload, S>;
 
 export type SpinHistoryCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   SpinHistoryFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -921,8 +921,8 @@ export type SpinHistoryCountArgs<
 };
 
 export interface SpinHistoryDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1448,8 +1448,8 @@ export interface SpinHistoryDelegate<
 export interface Prisma__SpinHistoryClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1534,8 +1534,8 @@ export interface SpinHistoryFieldRefs {
  * SpinHistory findUnique
  */
 export type SpinHistoryFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1559,8 +1559,8 @@ export type SpinHistoryFindUniqueArgs<
  * SpinHistory findUniqueOrThrow
  */
 export type SpinHistoryFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1584,8 +1584,8 @@ export type SpinHistoryFindUniqueOrThrowArgs<
  * SpinHistory findFirst
  */
 export type SpinHistoryFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1643,8 +1643,8 @@ export type SpinHistoryFindFirstArgs<
  * SpinHistory findFirstOrThrow
  */
 export type SpinHistoryFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1702,8 +1702,8 @@ export type SpinHistoryFindFirstOrThrowArgs<
  * SpinHistory findMany
  */
 export type SpinHistoryFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1756,8 +1756,8 @@ export type SpinHistoryFindManyArgs<
  * SpinHistory create
  */
 export type SpinHistoryCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1784,8 +1784,8 @@ export type SpinHistoryCreateArgs<
  * SpinHistory createMany
  */
 export type SpinHistoryCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many SpinHistories.
@@ -1798,8 +1798,8 @@ export type SpinHistoryCreateManyArgs<
  * SpinHistory createManyAndReturn
  */
 export type SpinHistoryCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1824,8 +1824,8 @@ export type SpinHistoryCreateManyAndReturnArgs<
  * SpinHistory update
  */
 export type SpinHistoryUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1856,8 +1856,8 @@ export type SpinHistoryUpdateArgs<
  * SpinHistory updateMany
  */
 export type SpinHistoryUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update SpinHistories.
@@ -1880,8 +1880,8 @@ export type SpinHistoryUpdateManyArgs<
  * SpinHistory updateManyAndReturn
  */
 export type SpinHistoryUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1916,8 +1916,8 @@ export type SpinHistoryUpdateManyAndReturnArgs<
  * SpinHistory upsert
  */
 export type SpinHistoryUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1955,8 +1955,8 @@ export type SpinHistoryUpsertArgs<
  * SpinHistory delete
  */
 export type SpinHistoryDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory
@@ -1980,8 +1980,8 @@ export type SpinHistoryDeleteArgs<
  * SpinHistory deleteMany
  */
 export type SpinHistoryDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which SpinHistories to delete
@@ -1997,8 +1997,8 @@ export type SpinHistoryDeleteManyArgs<
  * SpinHistory.spin
  */
 export type SpinHistory$spinArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Spin
@@ -2019,8 +2019,8 @@ export type SpinHistory$spinArgs<
  * SpinHistory.user
  */
 export type SpinHistory$userArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the User
@@ -2041,8 +2041,8 @@ export type SpinHistory$userArgs<
  * SpinHistory without action
  */
 export type SpinHistoryDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the SpinHistory

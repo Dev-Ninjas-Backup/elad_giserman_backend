@@ -3,6 +3,7 @@ import { HandleError } from '@/common/error/handle-error.decorator';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { FileType } from '@prisma';
+import { Express } from 'express';
 import * as fs from 'fs';
 import mime from 'mime-types';
 import * as path from 'path';

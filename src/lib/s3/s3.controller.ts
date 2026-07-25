@@ -13,6 +13,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
+import { Express } from 'express';
 import {
   ApiBearerAuth,
   ApiBody,
@@ -22,11 +23,11 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import * as multer from 'multer';
+import { extname } from 'path';
 import { DeleteFilesRequestDto } from './dto/delete-file.dto';
 import { UploadFilesRequestDto } from './dto/upload-file-request.dto';
 import { UploadFilesResponseDto } from './dto/upload-file-response.dto';
 import { S3Service } from './s3.service';
-import { extname } from 'path';
 
 @ApiBearerAuth()
 @ValidateAuth()
@@ -118,7 +119,6 @@ export class S3Controller {
     }),
   )
   async uploadToVps(@UploadedFiles() files: Express.Multer.File[]) {
-    console.log(files);
     return {
       message: 'Files uploaded successfully',
       files: files.map((file) => ({

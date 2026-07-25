@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 
-import { UpdateUserFavoriteDto } from './dto/update-user-favorite.dto';
 import { CreateFavoriteDto } from './dto/create-user-favorite.dto';
 import { PrismaService } from '@/lib/prisma/prisma.service';
 
