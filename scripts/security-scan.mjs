@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { execSync } from 'node:child_process';
-import { dirname, join } from 'node:path';
+import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -22,6 +22,7 @@ const SCANNED_GLOBS = [
   'eslint.config.mjs',
   '.husky/*',
   'scripts/*.js',
+  'scripts/*.mjs',
   'package.json',
   '.github/workflows/*.yml',
 ];
@@ -44,6 +45,50 @@ function getStagedFiles() {
   } catch {
     return [];
   }
+}
+
+function isRegularFile(relativePath) {
+  const absolutePath = join(ROOT, relativePath);
+  return existsSync(absolutePath) && statSync(absolutePath).isFile();
+}
+
+function expandGlob(pattern) {
+  if (!pattern.includes('*')) {
+    return isRegularFile(pattern) ? [pattern] : [];
+  }
+
+  const starIndex = pattern.indexOf('*');
+  const baseDir = pattern.slice(0, starIndex).replace(/\/$/, '') || '.';
+  const suffix = pattern.slice(starIndex + 1);
+  const absoluteDir = join(ROOT, baseDir);
+
+  if (!existsSync(absoluteDir) || !statSync(absoluteDir).isDirectory()) {
+    return [];
+  }
+
+  return readdirSync(absoluteDir)
+    .filter((name) => {
+      const absolutePath = join(absoluteDir, name);
+      return statSync(absolutePath).isFile() && name.endsWith(suffix);
+    })
+    .map((name) => (baseDir === '.' ? name : `${baseDir}/${name}`));
+}
+
+function matchesScannedGlob(file, glob) {
+  if (!glob.includes('*')) {
+    return file === glob;
+  }
+
+  const starIndex = glob.indexOf('*');
+  const baseDir = glob.slice(0, starIndex).replace(/\/$/, '');
+  const suffix = glob.slice(starIndex + 1);
+
+  if (baseDir && !file.startsWith(`${baseDir}/`)) {
+    return false;
+  }
+
+  const baseName = baseDir ? file.slice(baseDir.length + 1) : file;
+  return baseName.endsWith(suffix) && !baseName.includes('/');
 }
 
 function scanContent(relativePath, content) {
@@ -103,35 +148,15 @@ function verifyProtectedFile(entry) {
 
 function listFilesToScan(scanAll) {
   if (scanAll) {
-    const files = [];
-    for (const pattern of SCANNED_GLOBS) {
-      if (pattern.includes('*')) {
-        const dir = dirname(pattern);
-        const prefix = pattern.replace('*', '');
-        const absoluteDir = join(ROOT, dir === '.' ? '' : dir);
-        if (!existsSync(absoluteDir)) continue;
-        for (const name of execSync(`ls -1 "${absoluteDir}"`, { encoding: 'utf8' })
-          .split('\n')
-          .filter(Boolean)) {
-          if (name.endsWith(prefix.replace('*', '')) || pattern.endsWith('/*')) {
-            files.push(join(dir === '.' ? '' : dir, name).replace(/^\//, ''));
-          }
-        }
-      } else if (existsSync(join(ROOT, pattern))) {
-        files.push(pattern);
-      }
-    }
-    return [...new Set(files)];
+    return [...new Set(SCANNED_GLOBS.flatMap(expandGlob))];
   }
 
   const staged = getStagedFiles();
   const protectedPaths = loadManifest().protectedFiles.map((entry) => entry.path);
-  return [...new Set([...staged, ...protectedPaths])].filter((file) =>
-    SCANNED_GLOBS.some((glob) => {
-      if (!glob.includes('*')) return file === glob;
-      const [dir] = glob.split('*');
-      return file.startsWith(dir.replace(/\/$/, ''));
-    }),
+  return [...new Set([...staged, ...protectedPaths])].filter(
+    (file) =>
+      isRegularFile(file) &&
+      SCANNED_GLOBS.some((glob) => matchesScannedGlob(file, glob)),
   );
 }
 
@@ -145,11 +170,15 @@ function main() {
   }
 
   for (const relativePath of listFilesToScan(scanAll)) {
-    const absolutePath = join(ROOT, relativePath);
-    if (!existsSync(absolutePath) || absolutePath.endsWith('security-scan.js')) {
+    if (
+      relativePath.endsWith('security-scan.mjs') ||
+      relativePath.endsWith('security-scan.js') ||
+      !isRegularFile(relativePath)
+    ) {
       continue;
     }
-    const content = readFileSync(absolutePath, 'utf8');
+
+    const content = readFileSync(join(ROOT, relativePath), 'utf8');
     violations.push(...scanContent(relativePath, content));
   }
 

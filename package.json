@@ -17,7 +17,7 @@
     "format:fix": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "ci:check": "pnpm security:scan && pnpm format && pnpm lint && pnpm db:validate && pnpm build && pnpm start",
     "ci:fix": "pnpm format:fix && pnpm lint:fix",
-    "security:scan": "node scripts/security-scan.js --all",
+    "security:scan": "node scripts/security-scan.mjs --all",
     "prisma": "npx prisma",
     "db:push": "npx prisma db push",
     "db:generate": "npx prisma generate",
