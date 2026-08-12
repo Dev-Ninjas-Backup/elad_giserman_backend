@@ -81,8 +81,8 @@ export type ReviewReplyCountAggregateInputType = {
 };
 
 export type ReviewReplyAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which ReviewReply to aggregate.
@@ -143,8 +143,8 @@ export type GetReviewReplyAggregateType<T extends ReviewReplyAggregateArgs> = {
 };
 
 export type ReviewReplyGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.ReviewReplyWhereInput;
   orderBy?:
@@ -783,8 +783,8 @@ export type ReviewReplyUncheckedUpdateManyWithoutUserInput = {
 };
 
 export type ReviewReplySelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -800,8 +800,8 @@ export type ReviewReplySelect<
 >;
 
 export type ReviewReplySelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -817,8 +817,8 @@ export type ReviewReplySelectCreateManyAndReturn<
 >;
 
 export type ReviewReplySelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -843,37 +843,37 @@ export type ReviewReplySelectScalar = {
 };
 
 export type ReviewReplyOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'comment' | 'reviewId' | 'userId' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['reviewReply']
 >;
 export type ReviewReplyInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   review?: boolean | Prisma.ReviewDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type ReviewReplyIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   review?: boolean | Prisma.ReviewDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type ReviewReplyIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   review?: boolean | Prisma.ReviewDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 
 export type $ReviewReplyPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'ReviewReply';
   objects: {
@@ -899,8 +899,8 @@ export type ReviewReplyGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$ReviewReplyPayload, S>;
 
 export type ReviewReplyCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   ReviewReplyFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -909,8 +909,8 @@ export type ReviewReplyCountArgs<
 };
 
 export interface ReviewReplyDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1436,8 +1436,8 @@ export interface ReviewReplyDelegate<
 export interface Prisma__ReviewReplyClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1524,8 +1524,8 @@ export interface ReviewReplyFieldRefs {
  * ReviewReply findUnique
  */
 export type ReviewReplyFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1549,8 +1549,8 @@ export type ReviewReplyFindUniqueArgs<
  * ReviewReply findUniqueOrThrow
  */
 export type ReviewReplyFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1574,8 +1574,8 @@ export type ReviewReplyFindUniqueOrThrowArgs<
  * ReviewReply findFirst
  */
 export type ReviewReplyFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1633,8 +1633,8 @@ export type ReviewReplyFindFirstArgs<
  * ReviewReply findFirstOrThrow
  */
 export type ReviewReplyFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1692,8 +1692,8 @@ export type ReviewReplyFindFirstOrThrowArgs<
  * ReviewReply findMany
  */
 export type ReviewReplyFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1746,8 +1746,8 @@ export type ReviewReplyFindManyArgs<
  * ReviewReply create
  */
 export type ReviewReplyCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1774,8 +1774,8 @@ export type ReviewReplyCreateArgs<
  * ReviewReply createMany
  */
 export type ReviewReplyCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many ReviewReplies.
@@ -1788,8 +1788,8 @@ export type ReviewReplyCreateManyArgs<
  * ReviewReply createManyAndReturn
  */
 export type ReviewReplyCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1814,8 +1814,8 @@ export type ReviewReplyCreateManyAndReturnArgs<
  * ReviewReply update
  */
 export type ReviewReplyUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1846,8 +1846,8 @@ export type ReviewReplyUpdateArgs<
  * ReviewReply updateMany
  */
 export type ReviewReplyUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update ReviewReplies.
@@ -1870,8 +1870,8 @@ export type ReviewReplyUpdateManyArgs<
  * ReviewReply updateManyAndReturn
  */
 export type ReviewReplyUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1906,8 +1906,8 @@ export type ReviewReplyUpdateManyAndReturnArgs<
  * ReviewReply upsert
  */
 export type ReviewReplyUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1945,8 +1945,8 @@ export type ReviewReplyUpsertArgs<
  * ReviewReply delete
  */
 export type ReviewReplyDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply
@@ -1970,8 +1970,8 @@ export type ReviewReplyDeleteArgs<
  * ReviewReply deleteMany
  */
 export type ReviewReplyDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which ReviewReplies to delete
@@ -1987,8 +1987,8 @@ export type ReviewReplyDeleteManyArgs<
  * ReviewReply without action
  */
 export type ReviewReplyDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReviewReply

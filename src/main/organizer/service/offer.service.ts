@@ -7,14 +7,9 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { Readable } from 'stream';
 import { CreateOfferDto } from '../dto/create-offer.dto';
 import { UpdateOfferDto } from '../dto/update-offer.dto';
-import { generateQRCodeBuffer } from '../helps/qrCode';
 import {
-  format,
-  isValid,
-  subDays,
   startOfWeek,
   endOfWeek,
   startOfMonth,
@@ -24,10 +19,7 @@ import {
   eachDayOfInterval,
   eachMonthOfInterval,
 } from 'date-fns';
-import {
-  RedemptionFilterDto,
-  RedemptionPeriod,
-} from '@/main/admin/dto/admin.activity';
+import { RedemptionPeriod } from '@/main/admin/dto/admin.activity';
 @Injectable()
 export class OfferService {
   constructor(

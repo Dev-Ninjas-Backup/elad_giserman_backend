@@ -165,8 +165,8 @@ export type BusinessProfileCountAggregateInputType = {
 };
 
 export type BusinessProfileAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which BusinessProfile to aggregate.
@@ -229,8 +229,8 @@ export type GetBusinessProfileAggregateType<
 };
 
 export type BusinessProfileGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.BusinessProfileWhereInput;
   orderBy?:
@@ -2500,8 +2500,8 @@ export type BusinessProfileCountOutputType = {
 };
 
 export type BusinessProfileCountOutputTypeSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   reservation?: boolean | BusinessProfileCountOutputTypeCountReservationArgs;
   offers?: boolean | BusinessProfileCountOutputTypeCountOffersArgs;
@@ -2515,8 +2515,8 @@ export type BusinessProfileCountOutputTypeSelect<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfileCountOutputType
@@ -2528,8 +2528,8 @@ export type BusinessProfileCountOutputTypeDefaultArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountReservationArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.ReservationWhereInput;
 };
@@ -2538,8 +2538,8 @@ export type BusinessProfileCountOutputTypeCountReservationArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountOffersArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.OfferWhereInput;
 };
@@ -2548,8 +2548,8 @@ export type BusinessProfileCountOutputTypeCountOffersArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountReedemOfferArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.ReedemaOfferWhereInput;
 };
@@ -2558,8 +2558,8 @@ export type BusinessProfileCountOutputTypeCountReedemOfferArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountReviewsArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.ReviewWhereInput;
 };
@@ -2568,8 +2568,8 @@ export type BusinessProfileCountOutputTypeCountReviewsArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountFavoriteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.FavoriteWhereInput;
 };
@@ -2578,15 +2578,15 @@ export type BusinessProfileCountOutputTypeCountFavoriteArgs<
  * BusinessProfileCountOutputType without action
  */
 export type BusinessProfileCountOutputTypeCountGalleryArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.FileInstanceWhereInput;
 };
 
 export type BusinessProfileSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -2625,8 +2625,8 @@ export type BusinessProfileSelect<
 >;
 
 export type BusinessProfileSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -2656,8 +2656,8 @@ export type BusinessProfileSelectCreateManyAndReturn<
 >;
 
 export type BusinessProfileSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -2710,8 +2710,8 @@ export type BusinessProfileSelectScalar = {
 };
 
 export type BusinessProfileOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'title'
@@ -2736,8 +2736,8 @@ export type BusinessProfileOmit<
   ExtArgs['result']['businessProfile']
 >;
 export type BusinessProfileInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   reservation?: boolean | Prisma.BusinessProfile$reservationArgs<ExtArgs>;
   category?: boolean | Prisma.BusinessProfile$categoryArgs<ExtArgs>;
@@ -2750,23 +2750,23 @@ export type BusinessProfileInclude<
   _count?: boolean | Prisma.BusinessProfileCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type BusinessProfileIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   category?: boolean | Prisma.BusinessProfile$categoryArgs<ExtArgs>;
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type BusinessProfileIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   category?: boolean | Prisma.BusinessProfile$categoryArgs<ExtArgs>;
   owner?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 
 export type $BusinessProfilePayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'BusinessProfile';
   objects: {
@@ -2812,8 +2812,8 @@ export type BusinessProfileGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$BusinessProfilePayload, S>;
 
 export type BusinessProfileCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   BusinessProfileFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -2822,8 +2822,8 @@ export type BusinessProfileCountArgs<
 };
 
 export interface BusinessProfileDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -3358,8 +3358,8 @@ export interface BusinessProfileDelegate<
 export interface Prisma__BusinessProfileClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -3525,8 +3525,8 @@ export interface BusinessProfileFieldRefs {
  * BusinessProfile findUnique
  */
 export type BusinessProfileFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3550,8 +3550,8 @@ export type BusinessProfileFindUniqueArgs<
  * BusinessProfile findUniqueOrThrow
  */
 export type BusinessProfileFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3575,8 +3575,8 @@ export type BusinessProfileFindUniqueOrThrowArgs<
  * BusinessProfile findFirst
  */
 export type BusinessProfileFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3634,8 +3634,8 @@ export type BusinessProfileFindFirstArgs<
  * BusinessProfile findFirstOrThrow
  */
 export type BusinessProfileFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3693,8 +3693,8 @@ export type BusinessProfileFindFirstOrThrowArgs<
  * BusinessProfile findMany
  */
 export type BusinessProfileFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3747,8 +3747,8 @@ export type BusinessProfileFindManyArgs<
  * BusinessProfile create
  */
 export type BusinessProfileCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3775,8 +3775,8 @@ export type BusinessProfileCreateArgs<
  * BusinessProfile createMany
  */
 export type BusinessProfileCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many BusinessProfiles.
@@ -3791,8 +3791,8 @@ export type BusinessProfileCreateManyArgs<
  * BusinessProfile createManyAndReturn
  */
 export type BusinessProfileCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3819,8 +3819,8 @@ export type BusinessProfileCreateManyAndReturnArgs<
  * BusinessProfile update
  */
 export type BusinessProfileUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3851,8 +3851,8 @@ export type BusinessProfileUpdateArgs<
  * BusinessProfile updateMany
  */
 export type BusinessProfileUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update BusinessProfiles.
@@ -3875,8 +3875,8 @@ export type BusinessProfileUpdateManyArgs<
  * BusinessProfile updateManyAndReturn
  */
 export type BusinessProfileUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3911,8 +3911,8 @@ export type BusinessProfileUpdateManyAndReturnArgs<
  * BusinessProfile upsert
  */
 export type BusinessProfileUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3950,8 +3950,8 @@ export type BusinessProfileUpsertArgs<
  * BusinessProfile delete
  */
 export type BusinessProfileDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -3975,8 +3975,8 @@ export type BusinessProfileDeleteArgs<
  * BusinessProfile deleteMany
  */
 export type BusinessProfileDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which BusinessProfiles to delete
@@ -3992,8 +3992,8 @@ export type BusinessProfileDeleteManyArgs<
  * BusinessProfile.reservation
  */
 export type BusinessProfile$reservationArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Reservation
@@ -4023,8 +4023,8 @@ export type BusinessProfile$reservationArgs<
  * BusinessProfile.category
  */
 export type BusinessProfile$categoryArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Category
@@ -4045,8 +4045,8 @@ export type BusinessProfile$categoryArgs<
  * BusinessProfile.offers
  */
 export type BusinessProfile$offersArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Offer
@@ -4074,8 +4074,8 @@ export type BusinessProfile$offersArgs<
  * BusinessProfile.reedemOffer
  */
 export type BusinessProfile$reedemOfferArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -4105,8 +4105,8 @@ export type BusinessProfile$reedemOfferArgs<
  * BusinessProfile.reviews
  */
 export type BusinessProfile$reviewsArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Review
@@ -4134,8 +4134,8 @@ export type BusinessProfile$reviewsArgs<
  * BusinessProfile.favorite
  */
 export type BusinessProfile$favoriteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -4163,8 +4163,8 @@ export type BusinessProfile$favoriteArgs<
  * BusinessProfile.gallery
  */
 export type BusinessProfile$galleryArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -4194,8 +4194,8 @@ export type BusinessProfile$galleryArgs<
  * BusinessProfile without action
  */
 export type BusinessProfileDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile

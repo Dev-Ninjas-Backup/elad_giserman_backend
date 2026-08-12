@@ -83,8 +83,8 @@ export type NotificationCountAggregateInputType = {
 };
 
 export type NotificationAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Notification to aggregate.
@@ -146,8 +146,8 @@ export type GetNotificationAggregateType<T extends NotificationAggregateArgs> =
   };
 
 export type NotificationGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.NotificationWhereInput;
   orderBy?:
@@ -476,8 +476,8 @@ export type NotificationCountOutputType = {
 };
 
 export type NotificationCountOutputTypeSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   users?: boolean | NotificationCountOutputTypeCountUsersArgs;
 };
@@ -486,8 +486,8 @@ export type NotificationCountOutputTypeSelect<
  * NotificationCountOutputType without action
  */
 export type NotificationCountOutputTypeDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the NotificationCountOutputType
@@ -499,15 +499,15 @@ export type NotificationCountOutputTypeDefaultArgs<
  * NotificationCountOutputType without action
  */
 export type NotificationCountOutputTypeCountUsersArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.UserNotificationWhereInput;
 };
 
 export type NotificationSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -524,8 +524,8 @@ export type NotificationSelect<
 >;
 
 export type NotificationSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -540,8 +540,8 @@ export type NotificationSelectCreateManyAndReturn<
 >;
 
 export type NotificationSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -566,31 +566,31 @@ export type NotificationSelectScalar = {
 };
 
 export type NotificationOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'type' | 'title' | 'message' | 'meta' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['notification']
 >;
 export type NotificationInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   users?: boolean | Prisma.Notification$usersArgs<ExtArgs>;
   _count?: boolean | Prisma.NotificationCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type NotificationIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 export type NotificationIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 
 export type $NotificationPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'Notification';
   objects: {
@@ -616,8 +616,8 @@ export type NotificationGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$NotificationPayload, S>;
 
 export type NotificationCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   NotificationFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -626,8 +626,8 @@ export type NotificationCountArgs<
 };
 
 export interface NotificationDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1156,8 +1156,8 @@ export interface NotificationDelegate<
 export interface Prisma__NotificationClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1228,8 +1228,8 @@ export interface NotificationFieldRefs {
  * Notification findUnique
  */
 export type NotificationFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1253,8 +1253,8 @@ export type NotificationFindUniqueArgs<
  * Notification findUniqueOrThrow
  */
 export type NotificationFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1278,8 +1278,8 @@ export type NotificationFindUniqueOrThrowArgs<
  * Notification findFirst
  */
 export type NotificationFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1337,8 +1337,8 @@ export type NotificationFindFirstArgs<
  * Notification findFirstOrThrow
  */
 export type NotificationFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1396,8 +1396,8 @@ export type NotificationFindFirstOrThrowArgs<
  * Notification findMany
  */
 export type NotificationFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1450,8 +1450,8 @@ export type NotificationFindManyArgs<
  * Notification create
  */
 export type NotificationCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1478,8 +1478,8 @@ export type NotificationCreateArgs<
  * Notification createMany
  */
 export type NotificationCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many Notifications.
@@ -1494,8 +1494,8 @@ export type NotificationCreateManyArgs<
  * Notification createManyAndReturn
  */
 export type NotificationCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1518,8 +1518,8 @@ export type NotificationCreateManyAndReturnArgs<
  * Notification update
  */
 export type NotificationUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1550,8 +1550,8 @@ export type NotificationUpdateArgs<
  * Notification updateMany
  */
 export type NotificationUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update Notifications.
@@ -1574,8 +1574,8 @@ export type NotificationUpdateManyArgs<
  * Notification updateManyAndReturn
  */
 export type NotificationUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1606,8 +1606,8 @@ export type NotificationUpdateManyAndReturnArgs<
  * Notification upsert
  */
 export type NotificationUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1645,8 +1645,8 @@ export type NotificationUpsertArgs<
  * Notification delete
  */
 export type NotificationDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification
@@ -1670,8 +1670,8 @@ export type NotificationDeleteArgs<
  * Notification deleteMany
  */
 export type NotificationDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Notifications to delete
@@ -1687,8 +1687,8 @@ export type NotificationDeleteManyArgs<
  * Notification.users
  */
 export type Notification$usersArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1718,8 +1718,8 @@ export type Notification$usersArgs<
  * Notification without action
  */
 export type NotificationDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Notification

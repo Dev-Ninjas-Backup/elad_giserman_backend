@@ -2,7 +2,6 @@ import { PrismaService } from '@/lib/prisma/prisma.service';
 import { Injectable, NotFoundException } from '@nestjs/common';
 
 import { AdminUpdateOfferDto } from '../dto/admin-update-offer.dto';
-import { AdminActivity } from '@prisma';
 import { AdminActivityDto } from '../dto/admin.activity';
 
 @Injectable()

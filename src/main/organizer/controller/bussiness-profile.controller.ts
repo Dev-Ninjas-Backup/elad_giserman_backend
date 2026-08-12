@@ -35,8 +35,8 @@ import { OfferService } from '../service/offer.service';
 import { UpdateOfferDto } from '../dto/update-offer.dto';
 
 import { ProfileFilter } from '../dto/getProfileWithFilter.dto';
-import { CreateTermsAndConditionsDto } from '@/main/admin/dto/termAndCondition.dto';
 import { GetOffersDto2 } from '@/main/admin/dto/getOffer.dto';
+import { Express } from 'express';
 import { GetReviewDto } from '@/main/admin/dto/getReview.dto';
 import {
   CreateUserTermsAndConditionsDto,
@@ -61,7 +61,6 @@ export class BusinessProfileController {
   @ValidateAuth()
   @Get('review/get-all-review')
   async getAllReviews(@GetUser('sub') userId: string) {
-    console.log({ userId });
     try {
       const res = await this.businessProfileService.getAllReviews(userId);
       return {
@@ -379,7 +378,6 @@ export class BusinessProfileController {
     @GetUser('sub') userId: string,
   ) {
     try {
-      console.log(userId);
       const res =
         await this.businessProfileService.createAdminTermsAdnConditions(
           dto,

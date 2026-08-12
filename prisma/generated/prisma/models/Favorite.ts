@@ -75,8 +75,8 @@ export type FavoriteCountAggregateInputType = {
 };
 
 export type FavoriteAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Favorite to aggregate.
@@ -137,8 +137,8 @@ export type GetFavoriteAggregateType<T extends FavoriteAggregateArgs> = {
 };
 
 export type FavoriteGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.FavoriteWhereInput;
   orderBy?:
@@ -706,8 +706,8 @@ export type FavoriteUncheckedUpdateManyWithoutUserInput = {
 };
 
 export type FavoriteSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -722,8 +722,8 @@ export type FavoriteSelect<
 >;
 
 export type FavoriteSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -738,8 +738,8 @@ export type FavoriteSelectCreateManyAndReturn<
 >;
 
 export type FavoriteSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -762,37 +762,37 @@ export type FavoriteSelectScalar = {
 };
 
 export type FavoriteOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'userId' | 'restaurantId' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['favorite']
 >;
 export type FavoriteInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
   restaurant?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
 };
 export type FavoriteIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
   restaurant?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
 };
 export type FavoriteIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
   restaurant?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
 };
 
 export type $FavoritePayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'Favorite';
   objects: {
@@ -817,15 +817,15 @@ export type FavoriteGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$FavoritePayload, S>;
 
 export type FavoriteCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<FavoriteFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
   select?: FavoriteCountAggregateInputType | true;
 };
 
 export interface FavoriteDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1351,8 +1351,8 @@ export interface FavoriteDelegate<
 export interface Prisma__FavoriteClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1438,8 +1438,8 @@ export interface FavoriteFieldRefs {
  * Favorite findUnique
  */
 export type FavoriteFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1463,8 +1463,8 @@ export type FavoriteFindUniqueArgs<
  * Favorite findUniqueOrThrow
  */
 export type FavoriteFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1488,8 +1488,8 @@ export type FavoriteFindUniqueOrThrowArgs<
  * Favorite findFirst
  */
 export type FavoriteFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1545,8 +1545,8 @@ export type FavoriteFindFirstArgs<
  * Favorite findFirstOrThrow
  */
 export type FavoriteFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1602,8 +1602,8 @@ export type FavoriteFindFirstOrThrowArgs<
  * Favorite findMany
  */
 export type FavoriteFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1654,8 +1654,8 @@ export type FavoriteFindManyArgs<
  * Favorite create
  */
 export type FavoriteCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1682,8 +1682,8 @@ export type FavoriteCreateArgs<
  * Favorite createMany
  */
 export type FavoriteCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many Favorites.
@@ -1696,8 +1696,8 @@ export type FavoriteCreateManyArgs<
  * Favorite createManyAndReturn
  */
 export type FavoriteCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1722,8 +1722,8 @@ export type FavoriteCreateManyAndReturnArgs<
  * Favorite update
  */
 export type FavoriteUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1754,8 +1754,8 @@ export type FavoriteUpdateArgs<
  * Favorite updateMany
  */
 export type FavoriteUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update Favorites.
@@ -1778,8 +1778,8 @@ export type FavoriteUpdateManyArgs<
  * Favorite updateManyAndReturn
  */
 export type FavoriteUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1814,8 +1814,8 @@ export type FavoriteUpdateManyAndReturnArgs<
  * Favorite upsert
  */
 export type FavoriteUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1853,8 +1853,8 @@ export type FavoriteUpsertArgs<
  * Favorite delete
  */
 export type FavoriteDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite
@@ -1878,8 +1878,8 @@ export type FavoriteDeleteArgs<
  * Favorite deleteMany
  */
 export type FavoriteDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which Favorites to delete
@@ -1895,8 +1895,8 @@ export type FavoriteDeleteManyArgs<
  * Favorite without action
  */
 export type FavoriteDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Favorite

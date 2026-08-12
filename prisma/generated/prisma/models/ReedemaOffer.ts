@@ -117,8 +117,8 @@ export type ReedemaOfferCountAggregateInputType = {
 };
 
 export type ReedemaOfferAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which ReedemaOffer to aggregate.
@@ -180,8 +180,8 @@ export type GetReedemaOfferAggregateType<T extends ReedemaOfferAggregateArgs> =
   };
 
 export type ReedemaOfferGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.ReedemaOfferWhereInput;
   orderBy?:
@@ -1312,8 +1312,8 @@ export type ReedemaOfferUncheckedUpdateManyWithoutUserInput = {
 };
 
 export type ReedemaOfferSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1336,8 +1336,8 @@ export type ReedemaOfferSelect<
 >;
 
 export type ReedemaOfferSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1360,8 +1360,8 @@ export type ReedemaOfferSelectCreateManyAndReturn<
 >;
 
 export type ReedemaOfferSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1399,8 +1399,8 @@ export type ReedemaOfferSelectScalar = {
 };
 
 export type ReedemaOfferOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'offerId'
@@ -1417,24 +1417,24 @@ export type ReedemaOfferOmit<
   ExtArgs['result']['reedemaOffer']
 >;
 export type ReedemaOfferInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   business?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
   offer?: boolean | Prisma.OfferDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type ReedemaOfferIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   business?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
   offer?: boolean | Prisma.OfferDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type ReedemaOfferIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   business?: boolean | Prisma.BusinessProfileDefaultArgs<ExtArgs>;
   offer?: boolean | Prisma.OfferDefaultArgs<ExtArgs>;
@@ -1442,8 +1442,8 @@ export type ReedemaOfferIncludeUpdateManyAndReturn<
 };
 
 export type $ReedemaOfferPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'ReedemaOffer';
   objects: {
@@ -1476,8 +1476,8 @@ export type ReedemaOfferGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$ReedemaOfferPayload, S>;
 
 export type ReedemaOfferCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   ReedemaOfferFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -1486,8 +1486,8 @@ export type ReedemaOfferCountArgs<
 };
 
 export interface ReedemaOfferDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -2016,8 +2016,8 @@ export interface ReedemaOfferDelegate<
 export interface Prisma__ReedemaOfferClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -2124,8 +2124,8 @@ export interface ReedemaOfferFieldRefs {
  * ReedemaOffer findUnique
  */
 export type ReedemaOfferFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2149,8 +2149,8 @@ export type ReedemaOfferFindUniqueArgs<
  * ReedemaOffer findUniqueOrThrow
  */
 export type ReedemaOfferFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2174,8 +2174,8 @@ export type ReedemaOfferFindUniqueOrThrowArgs<
  * ReedemaOffer findFirst
  */
 export type ReedemaOfferFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2233,8 +2233,8 @@ export type ReedemaOfferFindFirstArgs<
  * ReedemaOffer findFirstOrThrow
  */
 export type ReedemaOfferFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2292,8 +2292,8 @@ export type ReedemaOfferFindFirstOrThrowArgs<
  * ReedemaOffer findMany
  */
 export type ReedemaOfferFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2346,8 +2346,8 @@ export type ReedemaOfferFindManyArgs<
  * ReedemaOffer create
  */
 export type ReedemaOfferCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2374,8 +2374,8 @@ export type ReedemaOfferCreateArgs<
  * ReedemaOffer createMany
  */
 export type ReedemaOfferCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many ReedemaOffers.
@@ -2390,8 +2390,8 @@ export type ReedemaOfferCreateManyArgs<
  * ReedemaOffer createManyAndReturn
  */
 export type ReedemaOfferCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2418,8 +2418,8 @@ export type ReedemaOfferCreateManyAndReturnArgs<
  * ReedemaOffer update
  */
 export type ReedemaOfferUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2450,8 +2450,8 @@ export type ReedemaOfferUpdateArgs<
  * ReedemaOffer updateMany
  */
 export type ReedemaOfferUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update ReedemaOffers.
@@ -2474,8 +2474,8 @@ export type ReedemaOfferUpdateManyArgs<
  * ReedemaOffer updateManyAndReturn
  */
 export type ReedemaOfferUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2510,8 +2510,8 @@ export type ReedemaOfferUpdateManyAndReturnArgs<
  * ReedemaOffer upsert
  */
 export type ReedemaOfferUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2549,8 +2549,8 @@ export type ReedemaOfferUpsertArgs<
  * ReedemaOffer delete
  */
 export type ReedemaOfferDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer
@@ -2574,8 +2574,8 @@ export type ReedemaOfferDeleteArgs<
  * ReedemaOffer deleteMany
  */
 export type ReedemaOfferDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which ReedemaOffers to delete
@@ -2591,8 +2591,8 @@ export type ReedemaOfferDeleteManyArgs<
  * ReedemaOffer without action
  */
 export type ReedemaOfferDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the ReedemaOffer

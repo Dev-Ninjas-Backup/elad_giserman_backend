@@ -81,8 +81,8 @@ export type UserNotificationCountAggregateInputType = {
 };
 
 export type UserNotificationAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserNotification to aggregate.
@@ -145,8 +145,8 @@ export type GetUserNotificationAggregateType<
 };
 
 export type UserNotificationGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.UserNotificationWhereInput;
   orderBy?:
@@ -802,8 +802,8 @@ export type UserNotificationUncheckedUpdateManyWithoutUserInput = {
 };
 
 export type UserNotificationSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -819,8 +819,8 @@ export type UserNotificationSelect<
 >;
 
 export type UserNotificationSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -836,8 +836,8 @@ export type UserNotificationSelectCreateManyAndReturn<
 >;
 
 export type UserNotificationSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -862,37 +862,37 @@ export type UserNotificationSelectScalar = {
 };
 
 export type UserNotificationOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'userId' | 'notificationId' | 'read' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['userNotification']
 >;
 export type UserNotificationInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   notification?: boolean | Prisma.NotificationDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type UserNotificationIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   notification?: boolean | Prisma.NotificationDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type UserNotificationIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   notification?: boolean | Prisma.NotificationDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 
 export type $UserNotificationPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'UserNotification';
   objects: {
@@ -918,8 +918,8 @@ export type UserNotificationGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$UserNotificationPayload, S>;
 
 export type UserNotificationCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   UserNotificationFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -928,8 +928,8 @@ export type UserNotificationCountArgs<
 };
 
 export interface UserNotificationDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1474,8 +1474,8 @@ export interface UserNotificationDelegate<
 export interface Prisma__UserNotificationClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1562,8 +1562,8 @@ export interface UserNotificationFieldRefs {
  * UserNotification findUnique
  */
 export type UserNotificationFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1587,8 +1587,8 @@ export type UserNotificationFindUniqueArgs<
  * UserNotification findUniqueOrThrow
  */
 export type UserNotificationFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1612,8 +1612,8 @@ export type UserNotificationFindUniqueOrThrowArgs<
  * UserNotification findFirst
  */
 export type UserNotificationFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1671,8 +1671,8 @@ export type UserNotificationFindFirstArgs<
  * UserNotification findFirstOrThrow
  */
 export type UserNotificationFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1730,8 +1730,8 @@ export type UserNotificationFindFirstOrThrowArgs<
  * UserNotification findMany
  */
 export type UserNotificationFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1784,8 +1784,8 @@ export type UserNotificationFindManyArgs<
  * UserNotification create
  */
 export type UserNotificationCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1812,8 +1812,8 @@ export type UserNotificationCreateArgs<
  * UserNotification createMany
  */
 export type UserNotificationCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many UserNotifications.
@@ -1828,8 +1828,8 @@ export type UserNotificationCreateManyArgs<
  * UserNotification createManyAndReturn
  */
 export type UserNotificationCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1856,8 +1856,8 @@ export type UserNotificationCreateManyAndReturnArgs<
  * UserNotification update
  */
 export type UserNotificationUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1888,8 +1888,8 @@ export type UserNotificationUpdateArgs<
  * UserNotification updateMany
  */
 export type UserNotificationUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update UserNotifications.
@@ -1912,8 +1912,8 @@ export type UserNotificationUpdateManyArgs<
  * UserNotification updateManyAndReturn
  */
 export type UserNotificationUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1948,8 +1948,8 @@ export type UserNotificationUpdateManyAndReturnArgs<
  * UserNotification upsert
  */
 export type UserNotificationUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -1987,8 +1987,8 @@ export type UserNotificationUpsertArgs<
  * UserNotification delete
  */
 export type UserNotificationDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification
@@ -2012,8 +2012,8 @@ export type UserNotificationDeleteArgs<
  * UserNotification deleteMany
  */
 export type UserNotificationDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserNotifications to delete
@@ -2029,8 +2029,8 @@ export type UserNotificationDeleteManyArgs<
  * UserNotification without action
  */
 export type UserNotificationDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserNotification

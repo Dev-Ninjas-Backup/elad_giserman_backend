@@ -78,7 +78,7 @@ async function bootstrap() {
 
   if (!fs.existsSync(upload_dir)) {
     fs.mkdirSync(upload_dir, { recursive: true });
-    console.log('Created uploads folder at', upload_dir);
+    console.info('Created uploads folder at', upload_dir);
   }
   app.use('/api/uploads', express.static(upload_dir));
 

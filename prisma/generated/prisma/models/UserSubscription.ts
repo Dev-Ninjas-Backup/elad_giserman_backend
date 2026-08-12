@@ -141,8 +141,8 @@ export type UserSubscriptionCountAggregateInputType = {
 };
 
 export type UserSubscriptionAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserSubscription to aggregate.
@@ -217,8 +217,8 @@ export type GetUserSubscriptionAggregateType<
 };
 
 export type UserSubscriptionGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.UserSubscriptionWhereInput;
   orderBy?:
@@ -1444,8 +1444,8 @@ export type UserSubscriptionCountOutputType = {
 };
 
 export type UserSubscriptionCountOutputTypeSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   invoices?: boolean | UserSubscriptionCountOutputTypeCountInvoicesArgs;
 };
@@ -1454,8 +1454,8 @@ export type UserSubscriptionCountOutputTypeSelect<
  * UserSubscriptionCountOutputType without action
  */
 export type UserSubscriptionCountOutputTypeDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscriptionCountOutputType
@@ -1467,15 +1467,15 @@ export type UserSubscriptionCountOutputTypeDefaultArgs<
  * UserSubscriptionCountOutputType without action
  */
 export type UserSubscriptionCountOutputTypeCountInvoicesArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.InvoiceWhereInput;
 };
 
 export type UserSubscriptionSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1502,8 +1502,8 @@ export type UserSubscriptionSelect<
 >;
 
 export type UserSubscriptionSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1526,8 +1526,8 @@ export type UserSubscriptionSelectCreateManyAndReturn<
 >;
 
 export type UserSubscriptionSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1566,8 +1566,8 @@ export type UserSubscriptionSelectScalar = {
 };
 
 export type UserSubscriptionOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'userId'
@@ -1585,8 +1585,8 @@ export type UserSubscriptionOmit<
   ExtArgs['result']['userSubscription']
 >;
 export type UserSubscriptionInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   invoices?: boolean | Prisma.UserSubscription$invoicesArgs<ExtArgs>;
   plan?: boolean | Prisma.SubscriptionPlanDefaultArgs<ExtArgs>;
@@ -1594,23 +1594,23 @@ export type UserSubscriptionInclude<
   _count?: boolean | Prisma.UserSubscriptionCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type UserSubscriptionIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   plan?: boolean | Prisma.SubscriptionPlanDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 export type UserSubscriptionIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   plan?: boolean | Prisma.SubscriptionPlanDefaultArgs<ExtArgs>;
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
 };
 
 export type $UserSubscriptionPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'UserSubscription';
   objects: {
@@ -1644,8 +1644,8 @@ export type UserSubscriptionGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$UserSubscriptionPayload, S>;
 
 export type UserSubscriptionCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   UserSubscriptionFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -1654,8 +1654,8 @@ export type UserSubscriptionCountArgs<
 };
 
 export interface UserSubscriptionDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -2200,8 +2200,8 @@ export interface UserSubscriptionDelegate<
 export interface Prisma__UserSubscriptionClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -2306,8 +2306,8 @@ export interface UserSubscriptionFieldRefs {
  * UserSubscription findUnique
  */
 export type UserSubscriptionFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2331,8 +2331,8 @@ export type UserSubscriptionFindUniqueArgs<
  * UserSubscription findUniqueOrThrow
  */
 export type UserSubscriptionFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2356,8 +2356,8 @@ export type UserSubscriptionFindUniqueOrThrowArgs<
  * UserSubscription findFirst
  */
 export type UserSubscriptionFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2415,8 +2415,8 @@ export type UserSubscriptionFindFirstArgs<
  * UserSubscription findFirstOrThrow
  */
 export type UserSubscriptionFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2474,8 +2474,8 @@ export type UserSubscriptionFindFirstOrThrowArgs<
  * UserSubscription findMany
  */
 export type UserSubscriptionFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2528,8 +2528,8 @@ export type UserSubscriptionFindManyArgs<
  * UserSubscription create
  */
 export type UserSubscriptionCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2556,8 +2556,8 @@ export type UserSubscriptionCreateArgs<
  * UserSubscription createMany
  */
 export type UserSubscriptionCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many UserSubscriptions.
@@ -2572,8 +2572,8 @@ export type UserSubscriptionCreateManyArgs<
  * UserSubscription createManyAndReturn
  */
 export type UserSubscriptionCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2600,8 +2600,8 @@ export type UserSubscriptionCreateManyAndReturnArgs<
  * UserSubscription update
  */
 export type UserSubscriptionUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2632,8 +2632,8 @@ export type UserSubscriptionUpdateArgs<
  * UserSubscription updateMany
  */
 export type UserSubscriptionUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update UserSubscriptions.
@@ -2656,8 +2656,8 @@ export type UserSubscriptionUpdateManyArgs<
  * UserSubscription updateManyAndReturn
  */
 export type UserSubscriptionUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2692,8 +2692,8 @@ export type UserSubscriptionUpdateManyAndReturnArgs<
  * UserSubscription upsert
  */
 export type UserSubscriptionUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2731,8 +2731,8 @@ export type UserSubscriptionUpsertArgs<
  * UserSubscription delete
  */
 export type UserSubscriptionDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription
@@ -2756,8 +2756,8 @@ export type UserSubscriptionDeleteArgs<
  * UserSubscription deleteMany
  */
 export type UserSubscriptionDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserSubscriptions to delete
@@ -2773,8 +2773,8 @@ export type UserSubscriptionDeleteManyArgs<
  * UserSubscription.invoices
  */
 export type UserSubscription$invoicesArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the Invoice
@@ -2802,8 +2802,8 @@ export type UserSubscription$invoicesArgs<
  * UserSubscription without action
  */
 export type UserSubscriptionDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserSubscription

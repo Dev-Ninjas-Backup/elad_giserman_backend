@@ -123,8 +123,8 @@ export type FileInstanceCountAggregateInputType = {
 };
 
 export type FileInstanceAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which FileInstance to aggregate.
@@ -198,8 +198,8 @@ export type GetFileInstanceAggregateType<T extends FileInstanceAggregateArgs> =
   };
 
 export type FileInstanceGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.FileInstanceWhereInput;
   orderBy?:
@@ -744,8 +744,8 @@ export type FileInstanceCountOutputType = {
 };
 
 export type FileInstanceCountOutputTypeSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   BusinessProfile?:
     | boolean
@@ -756,8 +756,8 @@ export type FileInstanceCountOutputTypeSelect<
  * FileInstanceCountOutputType without action
  */
 export type FileInstanceCountOutputTypeDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstanceCountOutputType
@@ -769,15 +769,15 @@ export type FileInstanceCountOutputTypeDefaultArgs<
  * FileInstanceCountOutputType without action
  */
 export type FileInstanceCountOutputTypeCountBusinessProfileArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.BusinessProfileWhereInput;
 };
 
 export type FileInstanceSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -799,8 +799,8 @@ export type FileInstanceSelect<
 >;
 
 export type FileInstanceSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -818,8 +818,8 @@ export type FileInstanceSelectCreateManyAndReturn<
 >;
 
 export type FileInstanceSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -850,8 +850,8 @@ export type FileInstanceSelectScalar = {
 };
 
 export type FileInstanceOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'filename'
@@ -866,24 +866,24 @@ export type FileInstanceOmit<
   ExtArgs['result']['fileInstance']
 >;
 export type FileInstanceInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   BusinessProfile?: boolean | Prisma.FileInstance$BusinessProfileArgs<ExtArgs>;
   _count?: boolean | Prisma.FileInstanceCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type FileInstanceIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 export type FileInstanceIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 
 export type $FileInstancePayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'FileInstance';
   objects: {
@@ -912,8 +912,8 @@ export type FileInstanceGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$FileInstancePayload, S>;
 
 export type FileInstanceCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   FileInstanceFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -922,8 +922,8 @@ export type FileInstanceCountArgs<
 };
 
 export interface FileInstanceDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1452,8 +1452,8 @@ export interface FileInstanceDelegate<
 export interface Prisma__FileInstanceClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1529,8 +1529,8 @@ export interface FileInstanceFieldRefs {
  * FileInstance findUnique
  */
 export type FileInstanceFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1554,8 +1554,8 @@ export type FileInstanceFindUniqueArgs<
  * FileInstance findUniqueOrThrow
  */
 export type FileInstanceFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1579,8 +1579,8 @@ export type FileInstanceFindUniqueOrThrowArgs<
  * FileInstance findFirst
  */
 export type FileInstanceFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1638,8 +1638,8 @@ export type FileInstanceFindFirstArgs<
  * FileInstance findFirstOrThrow
  */
 export type FileInstanceFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1697,8 +1697,8 @@ export type FileInstanceFindFirstOrThrowArgs<
  * FileInstance findMany
  */
 export type FileInstanceFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1751,8 +1751,8 @@ export type FileInstanceFindManyArgs<
  * FileInstance create
  */
 export type FileInstanceCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1779,8 +1779,8 @@ export type FileInstanceCreateArgs<
  * FileInstance createMany
  */
 export type FileInstanceCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many FileInstances.
@@ -1795,8 +1795,8 @@ export type FileInstanceCreateManyArgs<
  * FileInstance createManyAndReturn
  */
 export type FileInstanceCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1819,8 +1819,8 @@ export type FileInstanceCreateManyAndReturnArgs<
  * FileInstance update
  */
 export type FileInstanceUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1851,8 +1851,8 @@ export type FileInstanceUpdateArgs<
  * FileInstance updateMany
  */
 export type FileInstanceUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update FileInstances.
@@ -1875,8 +1875,8 @@ export type FileInstanceUpdateManyArgs<
  * FileInstance updateManyAndReturn
  */
 export type FileInstanceUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1907,8 +1907,8 @@ export type FileInstanceUpdateManyAndReturnArgs<
  * FileInstance upsert
  */
 export type FileInstanceUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1946,8 +1946,8 @@ export type FileInstanceUpsertArgs<
  * FileInstance delete
  */
 export type FileInstanceDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance
@@ -1971,8 +1971,8 @@ export type FileInstanceDeleteArgs<
  * FileInstance deleteMany
  */
 export type FileInstanceDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which FileInstances to delete
@@ -1988,8 +1988,8 @@ export type FileInstanceDeleteManyArgs<
  * FileInstance.BusinessProfile
  */
 export type FileInstance$BusinessProfileArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the BusinessProfile
@@ -2019,8 +2019,8 @@ export type FileInstance$BusinessProfileArgs<
  * FileInstance without action
  */
 export type FileInstanceDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the FileInstance

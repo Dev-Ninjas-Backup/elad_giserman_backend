@@ -60,9 +60,6 @@ export class SubscriptionService {
       priceWithoutDiscountDollars * 100,
     );
     const yearlyPriceCents = Math.round(Number(yearlyFinalPriceDollars) * 100);
-    const yearlyPriceWithoutDiscountCents = Math.round(
-      yearlyPriceWithoutDiscountDollars * 100,
-    );
 
     this.logger.log(`Final price: $${finalPriceDollars} (${priceCents}¢)`);
 

@@ -111,8 +111,8 @@ export type AdminActivityCountAggregateInputType = {
 };
 
 export type AdminActivityAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which AdminActivity to aggregate.
@@ -175,8 +175,8 @@ export type GetAdminActivityAggregateType<
 };
 
 export type AdminActivityGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.AdminActivityWhereInput;
   orderBy?:
@@ -620,8 +620,8 @@ export type DateTimeFieldUpdateOperationsInput = {
 };
 
 export type AdminActivitySelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -640,8 +640,8 @@ export type AdminActivitySelect<
 >;
 
 export type AdminActivitySelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -660,8 +660,8 @@ export type AdminActivitySelectCreateManyAndReturn<
 >;
 
 export type AdminActivitySelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -694,8 +694,8 @@ export type AdminActivitySelectScalar = {
 };
 
 export type AdminActivityOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'stripeConnectionStatus'
@@ -712,8 +712,8 @@ export type AdminActivityOmit<
 >;
 
 export type $AdminActivityPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'AdminActivity';
   objects: {};
@@ -741,8 +741,8 @@ export type AdminActivityGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$AdminActivityPayload, S>;
 
 export type AdminActivityCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   AdminActivityFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -751,8 +751,8 @@ export type AdminActivityCountArgs<
 };
 
 export interface AdminActivityDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1284,8 +1284,8 @@ export interface AdminActivityDelegate<
 export interface Prisma__AdminActivityClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1349,8 +1349,8 @@ export interface AdminActivityFieldRefs {
  * AdminActivity findUnique
  */
 export type AdminActivityFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1370,8 +1370,8 @@ export type AdminActivityFindUniqueArgs<
  * AdminActivity findUniqueOrThrow
  */
 export type AdminActivityFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1391,8 +1391,8 @@ export type AdminActivityFindUniqueOrThrowArgs<
  * AdminActivity findFirst
  */
 export type AdminActivityFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1446,8 +1446,8 @@ export type AdminActivityFindFirstArgs<
  * AdminActivity findFirstOrThrow
  */
 export type AdminActivityFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1501,8 +1501,8 @@ export type AdminActivityFindFirstOrThrowArgs<
  * AdminActivity findMany
  */
 export type AdminActivityFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1551,8 +1551,8 @@ export type AdminActivityFindManyArgs<
  * AdminActivity create
  */
 export type AdminActivityCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1575,8 +1575,8 @@ export type AdminActivityCreateArgs<
  * AdminActivity createMany
  */
 export type AdminActivityCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many AdminActivities.
@@ -1591,8 +1591,8 @@ export type AdminActivityCreateManyArgs<
  * AdminActivity createManyAndReturn
  */
 export type AdminActivityCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1615,8 +1615,8 @@ export type AdminActivityCreateManyAndReturnArgs<
  * AdminActivity update
  */
 export type AdminActivityUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1643,8 +1643,8 @@ export type AdminActivityUpdateArgs<
  * AdminActivity updateMany
  */
 export type AdminActivityUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update AdminActivities.
@@ -1667,8 +1667,8 @@ export type AdminActivityUpdateManyArgs<
  * AdminActivity updateManyAndReturn
  */
 export type AdminActivityUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1699,8 +1699,8 @@ export type AdminActivityUpdateManyAndReturnArgs<
  * AdminActivity upsert
  */
 export type AdminActivityUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1734,8 +1734,8 @@ export type AdminActivityUpsertArgs<
  * AdminActivity delete
  */
 export type AdminActivityDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity
@@ -1755,8 +1755,8 @@ export type AdminActivityDeleteArgs<
  * AdminActivity deleteMany
  */
 export type AdminActivityDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which AdminActivities to delete
@@ -1772,8 +1772,8 @@ export type AdminActivityDeleteManyArgs<
  * AdminActivity without action
  */
 export type AdminActivityDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the AdminActivity

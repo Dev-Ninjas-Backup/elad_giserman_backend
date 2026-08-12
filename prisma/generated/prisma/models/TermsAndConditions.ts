@@ -63,8 +63,8 @@ export type TermsAndConditionsCountAggregateInputType = {
 };
 
 export type TermsAndConditionsAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which TermsAndConditions to aggregate.
@@ -129,8 +129,8 @@ export type GetTermsAndConditionsAggregateType<
 };
 
 export type TermsAndConditionsGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.TermsAndConditionsWhereInput;
   orderBy?:
@@ -393,8 +393,8 @@ export type TermsAndConditionsCountOutputType = {
 };
 
 export type TermsAndConditionsCountOutputTypeSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   sections?: boolean | TermsAndConditionsCountOutputTypeCountSectionsArgs;
 };
@@ -403,8 +403,8 @@ export type TermsAndConditionsCountOutputTypeSelect<
  * TermsAndConditionsCountOutputType without action
  */
 export type TermsAndConditionsCountOutputTypeDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditionsCountOutputType
@@ -416,15 +416,15 @@ export type TermsAndConditionsCountOutputTypeDefaultArgs<
  * TermsAndConditionsCountOutputType without action
  */
 export type TermsAndConditionsCountOutputTypeCountSectionsArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.TermsSectionWhereInput;
 };
 
 export type TermsAndConditionsSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -439,8 +439,8 @@ export type TermsAndConditionsSelect<
 >;
 
 export type TermsAndConditionsSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -451,8 +451,8 @@ export type TermsAndConditionsSelectCreateManyAndReturn<
 >;
 
 export type TermsAndConditionsSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -469,15 +469,15 @@ export type TermsAndConditionsSelectScalar = {
 };
 
 export type TermsAndConditionsOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   'id' | 'createdAt' | 'updatedAt',
   ExtArgs['result']['termsAndConditions']
 >;
 export type TermsAndConditionsInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   sections?: boolean | Prisma.TermsAndConditions$sectionsArgs<ExtArgs>;
   _count?:
@@ -485,17 +485,17 @@ export type TermsAndConditionsInclude<
     | Prisma.TermsAndConditionsCountOutputTypeDefaultArgs<ExtArgs>;
 };
 export type TermsAndConditionsIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 export type TermsAndConditionsIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {};
 
 export type $TermsAndConditionsPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'TermsAndConditions';
   objects: {
@@ -517,8 +517,8 @@ export type TermsAndConditionsGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$TermsAndConditionsPayload, S>;
 
 export type TermsAndConditionsCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   TermsAndConditionsFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -527,8 +527,8 @@ export type TermsAndConditionsCountArgs<
 };
 
 export interface TermsAndConditionsDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1073,8 +1073,8 @@ export interface TermsAndConditionsDelegate<
 export interface Prisma__TermsAndConditionsClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1141,8 +1141,8 @@ export interface TermsAndConditionsFieldRefs {
  * TermsAndConditions findUnique
  */
 export type TermsAndConditionsFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1166,8 +1166,8 @@ export type TermsAndConditionsFindUniqueArgs<
  * TermsAndConditions findUniqueOrThrow
  */
 export type TermsAndConditionsFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1191,8 +1191,8 @@ export type TermsAndConditionsFindUniqueOrThrowArgs<
  * TermsAndConditions findFirst
  */
 export type TermsAndConditionsFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1250,8 +1250,8 @@ export type TermsAndConditionsFindFirstArgs<
  * TermsAndConditions findFirstOrThrow
  */
 export type TermsAndConditionsFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1309,8 +1309,8 @@ export type TermsAndConditionsFindFirstOrThrowArgs<
  * TermsAndConditions findMany
  */
 export type TermsAndConditionsFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1363,8 +1363,8 @@ export type TermsAndConditionsFindManyArgs<
  * TermsAndConditions create
  */
 export type TermsAndConditionsCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1391,8 +1391,8 @@ export type TermsAndConditionsCreateArgs<
  * TermsAndConditions createMany
  */
 export type TermsAndConditionsCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many TermsAndConditions.
@@ -1407,8 +1407,8 @@ export type TermsAndConditionsCreateManyArgs<
  * TermsAndConditions createManyAndReturn
  */
 export type TermsAndConditionsCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1431,8 +1431,8 @@ export type TermsAndConditionsCreateManyAndReturnArgs<
  * TermsAndConditions update
  */
 export type TermsAndConditionsUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1463,8 +1463,8 @@ export type TermsAndConditionsUpdateArgs<
  * TermsAndConditions updateMany
  */
 export type TermsAndConditionsUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update TermsAndConditions.
@@ -1487,8 +1487,8 @@ export type TermsAndConditionsUpdateManyArgs<
  * TermsAndConditions updateManyAndReturn
  */
 export type TermsAndConditionsUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1519,8 +1519,8 @@ export type TermsAndConditionsUpdateManyAndReturnArgs<
  * TermsAndConditions upsert
  */
 export type TermsAndConditionsUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1558,8 +1558,8 @@ export type TermsAndConditionsUpsertArgs<
  * TermsAndConditions delete
  */
 export type TermsAndConditionsDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions
@@ -1583,8 +1583,8 @@ export type TermsAndConditionsDeleteArgs<
  * TermsAndConditions deleteMany
  */
 export type TermsAndConditionsDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which TermsAndConditions to delete
@@ -1600,8 +1600,8 @@ export type TermsAndConditionsDeleteManyArgs<
  * TermsAndConditions.sections
  */
 export type TermsAndConditions$sectionsArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsSection
@@ -1631,8 +1631,8 @@ export type TermsAndConditions$sectionsArgs<
  * TermsAndConditions without action
  */
 export type TermsAndConditionsDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the TermsAndConditions

@@ -97,8 +97,8 @@ export type UserTermsAndConditionsCountAggregateInputType = {
 };
 
 export type UserTermsAndConditionsAggregateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserTermsAndConditions to aggregate.
@@ -163,8 +163,8 @@ export type GetUserTermsAndConditionsAggregateType<
 };
 
 export type UserTermsAndConditionsGroupByArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   where?: Prisma.UserTermsAndConditionsWhereInput;
   orderBy?:
@@ -1015,8 +1015,8 @@ export type UserTermsAndConditionsUncheckedUpdateManyWithoutBusinessProfileInput
   };
 
 export type UserTermsAndConditionsSelect<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1039,8 +1039,8 @@ export type UserTermsAndConditionsSelect<
 >;
 
 export type UserTermsAndConditionsSelectCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1063,8 +1063,8 @@ export type UserTermsAndConditionsSelectCreateManyAndReturn<
 >;
 
 export type UserTermsAndConditionsSelectUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetSelect<
   {
     id?: boolean;
@@ -1102,8 +1102,8 @@ export type UserTermsAndConditionsSelectScalar = {
 };
 
 export type UserTermsAndConditionsOmit<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = runtime.Types.Extensions.GetOmit<
   | 'id'
   | 'liability'
@@ -1120,24 +1120,24 @@ export type UserTermsAndConditionsOmit<
   ExtArgs['result']['userTermsAndConditions']
 >;
 export type UserTermsAndConditionsInclude<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   businessProfile?:
     | boolean
     | Prisma.UserTermsAndConditions$businessProfileArgs<ExtArgs>;
 };
 export type UserTermsAndConditionsIncludeCreateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   businessProfile?:
     | boolean
     | Prisma.UserTermsAndConditions$businessProfileArgs<ExtArgs>;
 };
 export type UserTermsAndConditionsIncludeUpdateManyAndReturn<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   businessProfile?:
     | boolean
@@ -1145,8 +1145,8 @@ export type UserTermsAndConditionsIncludeUpdateManyAndReturn<
 };
 
 export type $UserTermsAndConditionsPayload<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   name: 'UserTermsAndConditions';
   objects: {
@@ -1177,8 +1177,8 @@ export type UserTermsAndConditionsGetPayload<
 > = runtime.Types.Result.GetResult<Prisma.$UserTermsAndConditionsPayload, S>;
 
 export type UserTermsAndConditionsCountArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = Omit<
   UserTermsAndConditionsFindManyArgs,
   'select' | 'include' | 'distinct' | 'omit'
@@ -1187,8 +1187,8 @@ export type UserTermsAndConditionsCountArgs<
 };
 
 export interface UserTermsAndConditionsDelegate<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > {
   [K: symbol]: {
@@ -1739,8 +1739,8 @@ export interface UserTermsAndConditionsDelegate<
 export interface Prisma__UserTermsAndConditionsClient<
   T,
   Null = never,
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
   GlobalOmitOptions = {},
 > extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: 'PrismaPromise';
@@ -1838,8 +1838,8 @@ export interface UserTermsAndConditionsFieldRefs {
  * UserTermsAndConditions findUnique
  */
 export type UserTermsAndConditionsFindUniqueArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -1863,8 +1863,8 @@ export type UserTermsAndConditionsFindUniqueArgs<
  * UserTermsAndConditions findUniqueOrThrow
  */
 export type UserTermsAndConditionsFindUniqueOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -1888,8 +1888,8 @@ export type UserTermsAndConditionsFindUniqueOrThrowArgs<
  * UserTermsAndConditions findFirst
  */
 export type UserTermsAndConditionsFindFirstArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -1947,8 +1947,8 @@ export type UserTermsAndConditionsFindFirstArgs<
  * UserTermsAndConditions findFirstOrThrow
  */
 export type UserTermsAndConditionsFindFirstOrThrowArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2006,8 +2006,8 @@ export type UserTermsAndConditionsFindFirstOrThrowArgs<
  * UserTermsAndConditions findMany
  */
 export type UserTermsAndConditionsFindManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2060,8 +2060,8 @@ export type UserTermsAndConditionsFindManyArgs<
  * UserTermsAndConditions create
  */
 export type UserTermsAndConditionsCreateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2088,8 +2088,8 @@ export type UserTermsAndConditionsCreateArgs<
  * UserTermsAndConditions createMany
  */
 export type UserTermsAndConditionsCreateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to create many UserTermsAndConditions.
@@ -2104,8 +2104,8 @@ export type UserTermsAndConditionsCreateManyArgs<
  * UserTermsAndConditions createManyAndReturn
  */
 export type UserTermsAndConditionsCreateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2132,8 +2132,8 @@ export type UserTermsAndConditionsCreateManyAndReturnArgs<
  * UserTermsAndConditions update
  */
 export type UserTermsAndConditionsUpdateArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2164,8 +2164,8 @@ export type UserTermsAndConditionsUpdateArgs<
  * UserTermsAndConditions updateMany
  */
 export type UserTermsAndConditionsUpdateManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * The data used to update UserTermsAndConditions.
@@ -2188,8 +2188,8 @@ export type UserTermsAndConditionsUpdateManyArgs<
  * UserTermsAndConditions updateManyAndReturn
  */
 export type UserTermsAndConditionsUpdateManyAndReturnArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2224,8 +2224,8 @@ export type UserTermsAndConditionsUpdateManyAndReturnArgs<
  * UserTermsAndConditions upsert
  */
 export type UserTermsAndConditionsUpsertArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2263,8 +2263,8 @@ export type UserTermsAndConditionsUpsertArgs<
  * UserTermsAndConditions delete
  */
 export type UserTermsAndConditionsDeleteArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions
@@ -2288,8 +2288,8 @@ export type UserTermsAndConditionsDeleteArgs<
  * UserTermsAndConditions deleteMany
  */
 export type UserTermsAndConditionsDeleteManyArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Filter which UserTermsAndConditions to delete
@@ -2305,8 +2305,8 @@ export type UserTermsAndConditionsDeleteManyArgs<
  * UserTermsAndConditions.businessProfile
  */
 export type UserTermsAndConditions$businessProfileArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the User
@@ -2327,8 +2327,8 @@ export type UserTermsAndConditions$businessProfileArgs<
  * UserTermsAndConditions without action
  */
 export type UserTermsAndConditionsDefaultArgs<
-  ExtArgs extends runtime.Types.Extensions.InternalArgs =
-    runtime.Types.Extensions.DefaultArgs,
+  ExtArgs extends
+    runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs,
 > = {
   /**
    * Select specific fields to fetch from the UserTermsAndConditions

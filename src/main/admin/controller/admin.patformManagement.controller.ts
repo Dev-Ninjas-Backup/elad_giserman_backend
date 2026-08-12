@@ -21,6 +21,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
+import { Express } from 'express';
 import { PlatformFilter } from '../dto/getPlatform.dto';
 import { AdminPlatfromManagementService } from '../service/admin.platfromManagement.service';
 
@@ -70,7 +71,7 @@ export class AdminPlatformManagementController {
   @Get('user/:id')
   async getUserDetails(@Param('id') id: string) {
     try {
-      console.log(id);
+      this.logger.log(`Fetching user details for ID=${id}`);
     } catch (error) {
       const message = extractLastLine(error.message);
       this.logger.error(`Faild to delete user by ID=${id}`, error.stack);
