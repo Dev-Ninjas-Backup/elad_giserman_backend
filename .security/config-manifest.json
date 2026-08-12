@@ -1,0 +1,17 @@
+{
+  "protectedFiles": [
+    {
+      "path": "eslint.config.mjs",
+      "maxBytes": 2048,
+      "sha256": "b9c0d812b45b4ec28ced901236812d759592d252b324d0adcd67fbdf393440fb"
+    },
+    {
+      "path": ".husky/pre-commit",
+      "maxBytes": 512
+    },
+    {
+      "path": "scripts/ci-hooks.js",
+      "maxBytes": 8192
+    }
+  ]
+}
